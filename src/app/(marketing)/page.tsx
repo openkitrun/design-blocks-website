@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <main>
@@ -44,9 +46,12 @@ export default function HomePage() {
             </div>
 
             <div className="flex justify-center gap-6 mt-16">
-              <button className="bg-white py-4 px-10 rounded-2xl text-black text-xl font-semibold">
+              <Link
+                href="/docs"
+                className="bg-white py-4 px-10 rounded-2xl text-black text-xl font-semibold"
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           </section>
         </div>

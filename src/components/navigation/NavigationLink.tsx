@@ -15,9 +15,10 @@ export function NavigationLink({
   children,
   startAdornment,
   endAdornment,
+  href,
 }: NavigationLinkProps) {
   return (
-    <Link href="/" className="px-3 py-2 rounded-md hover:bg-gray-500/40">
+    <Link href={href} className="px-3 py-2 rounded-md hover:bg-gray-500/40">
       {startAdornment && (
         <div className="flex flex-row items-center gap-4">
           {startAdornment}

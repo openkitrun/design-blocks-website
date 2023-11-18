@@ -7,7 +7,7 @@ import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 
 import IconDb from "@/design-system/DB";
 
-import NavigationMenu from "./NavigationMenu";
+import NavigationMenu from "@/components/navigation/NavigationMenu";
 
 type MainLayoutProps = {
   children?: React.ReactNode;

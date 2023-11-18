@@ -22,7 +22,11 @@
       "@/app/*": ["./src/app/*"],
       "@/design-system/*": ["./src/@design-system/*"],
       "@/components/*": ["./src/components/*"],
-      "@/utils/*": ["./src/utils/*"]
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/libs/*": ["./src/libs/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/contentlayer/*": ["./contentlayer.config.js"],
+      "@/contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
