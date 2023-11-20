@@ -1,6 +1,12 @@
+import * as React from "react";
+
 import Link from "next/link";
 
-export default function HomePage() {
+import clsx from "clsx";
+
+import { HowItWorks } from "@/components/home/work-db/WorkDB";
+
+export default async function HomePage() {
   return (
     <main>
       <div className="bg-gradient-to-r from-blue-900/25 via-[#050505] to-[#050505]">
@@ -87,6 +93,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HowItWorks />
     </main>
   );
 }
