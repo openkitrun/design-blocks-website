@@ -12,7 +12,7 @@ export const Card: FC<{
       className={clsx(
         "overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950",
         shadow && `shadow-lg shadow-zinc-900`,
-        className
+        className,
       )}
     >
       {children}

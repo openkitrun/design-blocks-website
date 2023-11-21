@@ -41,11 +41,12 @@ function MarketingLayout({ children }: MainLayoutProps) {
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-5">
               <IconDb size={150} />
+
               <Link href="/">
-                <SiGithub size={20} />
+                <SiGithub size={18} />
               </Link>
               <Link href="/">
-                <SiX size={20} />
+                <SiX size={18} />
               </Link>
             </div>
 

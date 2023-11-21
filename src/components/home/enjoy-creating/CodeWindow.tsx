@@ -1,7 +1,6 @@
 "use client";
 
 import { FC } from "react";
-import { useRouter } from "next/navigation";
 
 import * as Tabs from "@radix-ui/react-tabs";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
@@ -13,8 +12,6 @@ export type CodeSnippet = { file: string; content: string; lines: number };
 export const CodeWindow: FC<{
   snippets: readonly CodeSnippet[];
 }> = ({ snippets }) => {
-  const router = useRouter();
-
   return (
     <Card shadow className="mb-0">
       <Tabs.Root defaultValue={snippets[0].file}>
@@ -22,7 +19,7 @@ export const CodeWindow: FC<{
           aria-label="Select file to view"
           className="flex flex-nowrap overflow-x-auto"
         >
-          <div className="flex h-10 items-center gap-2 px-4 border-r border-b border-zinc-900">
+          <div className="flex h-10 items-center gap-2 border-b border-r border-zinc-900 px-4">
             <span className="h-3 w-3 rounded-full bg-zinc-700" />
             <span className="h-3 w-3 rounded-full bg-zinc-700" />
             <span className="h-3 w-3 rounded-full bg-zinc-700" />
@@ -32,7 +29,7 @@ export const CodeWindow: FC<{
             <Tabs.Trigger
               key={index}
               value={file}
-              className="relative flex h-10 shrink-0 items-center border-r border-b px-4 text-sm  focus:outline-none focus:ring-2 radix-state-active:border-b-transparent border-zinc-900 text-zinc-100 hover:cursor-pointer focus:ring-blue-900 data-[state=active]:bg-blue-950"
+              className="radix-state-active:border-b-transparent relative flex h-10 shrink-0 items-center border-b border-r border-zinc-900  px-4 text-sm text-zinc-100 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-900 data-[state=active]:bg-blue-950"
             >
               {file}
             </Tabs.Trigger>
@@ -48,7 +45,7 @@ export const CodeWindow: FC<{
               value={file}
               className="flex overflow-y-hidden focus:outline-none"
             >
-              <div className="w-8 shrink-0 grow-0 pt-[19px] pb-3 text-right font-mono text-sm leading-none bg-zinc-950 text-zinc-400">
+              <div className="w-8 shrink-0 grow-0 bg-zinc-950 pb-3 pt-[19px] text-right font-mono text-sm leading-none text-zinc-400">
                 {[...new Array(lines)].map((v, index) => (
                   <div key={index} className="h-[20px] px-2">
                     {index + 1}
@@ -57,9 +54,9 @@ export const CodeWindow: FC<{
               </div>
 
               <ScrollArea.Root className="w-full overflow-hidden bg-zinc-950">
-                <ScrollArea.Viewport className="w-full h-full">
+                <ScrollArea.Viewport className="h-full w-full">
                   <div
-                    className="text-[13px] not-prose -mt-[18px] -mb-[40px]"
+                    className="not-prose -mb-[40px] -mt-[18px] text-[13px]"
                     dangerouslySetInnerHTML={{ __html: content }}
                   />
                 </ScrollArea.Viewport>

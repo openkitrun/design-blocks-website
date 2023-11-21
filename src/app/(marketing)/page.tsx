@@ -2,13 +2,18 @@ import * as React from "react";
 
 import Link from "next/link";
 
-import { HowItWorks } from "@/components/home/work-db/WorkDB";
+import { EnjoyCreating } from "@/components/home/enjoy-creating/EnjoyCreating";
 
 export default async function HomePage() {
   return (
     <main>
+      {/* <Code lang="tsx" subProps={codeSnippets} /> */}
+
+      {/* <Code lang="tsx" lineNumbers>
+        {codeSnippets[0].code}
+      </Code> */}
+
       <div className="bg-gradient-to-r from-blue-900/25 via-[#050505] to-[#050505]">
-        {/* <div className="bg-[url('../../public/bg-section.svg')] border-t border-zinc-800 py-12"> */}
         <div className="border-t border-zinc-800 py-12">
           <section className="mx-4 flex max-w-5xl flex-col sm:mx-auto">
             <div className="mb-4 flex justify-center">
@@ -56,6 +61,13 @@ export default async function HomePage() {
               >
                 Get Started
               </Link>
+
+              <Link
+                href="/docs"
+                className="rounded-2xl bg-white px-10 py-4 text-xl font-semibold text-black"
+              >
+                Learn Design Blocks
+              </Link>
             </div>
           </section>
         </div>
@@ -92,7 +104,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <HowItWorks />
+      <EnjoyCreating />
     </main>
   );
 }
