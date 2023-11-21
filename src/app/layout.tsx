@@ -74,9 +74,6 @@ export const metadata: Metadata = {
     title: "Design Blocks",
     card: "summary_large_image",
   },
-  icons: {
-    shortcut: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -88,9 +85,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cls(
-          "text-white bg-[#050505]",
+          "bg-[#050505] text-white",
           inter.variable,
-          jetBrainsMono.variable
+          jetBrainsMono.variable,
         )}
       >
         {children}
