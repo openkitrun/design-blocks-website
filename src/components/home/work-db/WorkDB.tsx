@@ -404,9 +404,9 @@ export const HowItWorks: FC = () => {
                   alt=""
                 />
 
-                <div className="flex flex-row items-center gap-2 rounded-full bg-zinc-800 px-4 py-1">
-                  <SiAndroid size={16} />
-                  <span className="text-xs">Android</span>
+                <div className="flex flex-row items-center gap-2 rounded-full bg-emerald-950 px-4 py-1">
+                  <SiAndroid size={16} color="#34d399" />
+                  <span className="text-xs text-emerald-400">Android</span>
                 </div>
               </div>
             </div>

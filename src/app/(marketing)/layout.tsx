@@ -16,13 +16,12 @@ type MainLayoutProps = {
 function MarketingLayout({ children }: MainLayoutProps) {
   return (
     <>
-      <div className="max-w-7xl flex flex-col px-4 sm:mx-auto">
+      <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
         <header className="py-3">
-          <nav className="flex flex-row items-center h-full">
+          <nav className="flex h-full flex-row items-center">
             <div className="">
               <Link href="/">
                 <IconDb size={180} />
-                {/* Design Blocks */}
               </Link>
             </div>
 
@@ -37,7 +36,7 @@ function MarketingLayout({ children }: MainLayoutProps) {
 
       <main>{children}</main>
 
-      <footer className="max-w-7xl flex flex-col px-4 sm:mx-auto">
+      <footer className="flex max-w-7xl flex-col px-4 sm:mx-auto">
         <div className="py-20">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-5">

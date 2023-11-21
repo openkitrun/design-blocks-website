@@ -2,8 +2,6 @@ import * as React from "react";
 
 import Link from "next/link";
 
-import clsx from "clsx";
-
 import { HowItWorks } from "@/components/home/work-db/WorkDB";
 
 export default async function HomePage() {
@@ -12,18 +10,18 @@ export default async function HomePage() {
       <div className="bg-gradient-to-r from-blue-900/25 via-[#050505] to-[#050505]">
         {/* <div className="bg-[url('../../public/bg-section.svg')] border-t border-zinc-800 py-12"> */}
         <div className="border-t border-zinc-800 py-12">
-          <section className="max-w-5xl flex flex-col sm:mx-auto mx-4">
-            <div className="flex justify-center mb-4">
-              <div className="flex flex-row items-center gap-3 bg-amber-950/40 text-amber-500 py-2 px-5 rounded-full">
-                <div className="flex items-center justify-center bg-amber-900/40 w-5 h-5 rounded-full">
-                  <div className="bg-amber-900 w-2 h-2 rounded-full" />
+          <section className="mx-4 flex max-w-5xl flex-col sm:mx-auto">
+            <div className="mb-4 flex justify-center">
+              <div className="flex flex-row items-center gap-3 rounded-full bg-amber-950/40 px-5 py-2 text-amber-500">
+                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-900/40">
+                  <div className="h-2 w-2 rounded-full bg-amber-900" />
                 </div>
                 <span>work in progress</span>
               </div>
             </div>
 
             <div className="flex flex-col gap-12">
-              <h1 className="text-8xl font-semibold leading-none text-center">
+              <h1 className="text-center text-8xl font-semibold leading-none">
                 <span className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                   Build
                 </span>{" "}
@@ -33,28 +31,28 @@ export default async function HomePage() {
                 </span>
               </h1>
 
-              <div className="max-w-3xl mx-auto">
-                <p className="text-3xl tracking-widest leading-relaxed text-center">
+              <div className="mx-auto max-w-3xl">
+                <p className="text-center text-3xl leading-relaxed tracking-widest">
                   An open source UI component library that focuses on{" "}
-                  <span className="py-1 px-2 rounded-md bg-rose-950 text-rose-500">
+                  <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">
                     customization
                   </span>
                   ,
-                  <span className="py-1 px-2 rounded-md bg-emerald-950 text-emerald-500">
+                  <span className="rounded-md bg-emerald-950 px-2 py-1 text-emerald-500">
                     developer
                   </span>{" "}
                   experience, and building mobile apps with{" "}
-                  <span className="py-1 px-2 rounded-md bg-blue-950 text-blue-500">
+                  <span className="rounded-md bg-blue-950 px-2 py-1 text-blue-500">
                     react-native.
                   </span>{" "}
                 </p>
               </div>
             </div>
 
-            <div className="flex justify-center gap-6 mt-16">
+            <div className="mt-16 flex justify-center gap-6">
               <Link
                 href="/docs"
-                className="bg-white py-4 px-10 rounded-2xl text-black text-xl font-semibold"
+                className="rounded-2xl bg-white px-10 py-4 text-xl font-semibold text-black"
               >
                 Get Started
               </Link>
@@ -64,9 +62,9 @@ export default async function HomePage() {
       </div>
 
       <section className="bg-gray-500/10 py-24">
-        <div className="max-w-2xl flex flex-col px-4 sm:mx-auto">
+        <div className="flex max-w-2xl flex-col px-4 sm:mx-auto">
           <div className="flex flex-col gap-8">
-            <p className="text-xl subpixel-antialiased tracking-wider">
+            <p className="text-xl tracking-wider subpixel-antialiased">
               <span className="inline-block bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-400 bg-clip-text text-transparent">
                 Design Blocks: Streamline your React Native development.
               </span>{" "}
@@ -74,7 +72,7 @@ export default async function HomePage() {
               to fast-track your next app to production.
             </p>
 
-            <p className="text-xl subpixel-antialiased tracking-wider">
+            <p className="text-xl tracking-wider subpixel-antialiased">
               We firmly believe in providing developers with the best tools. Our
               goal is to build a strong community where you come first,{" "}
               <span className="inline-block bg-gradient-to-r from-emerald-400 via-emerald-500 to-sky-400 bg-clip-text text-transparent">
@@ -82,7 +80,7 @@ export default async function HomePage() {
               </span>
             </p>
 
-            <p className="text-xl subpixel-antialiased tracking-wider">
+            <p className="text-xl tracking-wider subpixel-antialiased">
               At Design Blocks, we aim to make our blocks the key for quick app
               assembly,{" "}
               <span className="text-gray-400">
