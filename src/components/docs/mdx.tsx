@@ -4,14 +4,15 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 
 import cls from "@/utils/cls";
 
-import MdxCard from "@/components/docs/mdx-card";
+import MdxCard from "./mdx-card";
+import HeroHome from "./overview/HeroHome";
 
 const components = {
   h1: ({ className, ...props }) => (
     <h1
       className={cls(
         "mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -20,7 +21,7 @@ const components = {
     <h2
       className={cls(
         "mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0",
-        className
+        className,
       )}
       {...props}
     />
@@ -29,7 +30,7 @@ const components = {
     <h3
       className={cls(
         "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -38,7 +39,7 @@ const components = {
     <h4
       className={cls(
         "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -47,7 +48,7 @@ const components = {
     <h5
       className={cls(
         "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -56,7 +57,7 @@ const components = {
     <h6
       className={cls(
         "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className
+        className,
       )}
       {...props}
     />
@@ -85,8 +86,8 @@ const components = {
   blockquote: ({ className, ...props }) => (
     <blockquote
       className={cls(
-        "mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground",
-        className
+        "[&>*]:text-muted-foreground mt-6 border-l-2 pl-6 italic",
+        className,
       )}
       {...props}
     />
@@ -107,7 +108,7 @@ const components = {
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
-      className={cls("m-0 border-t p-0 even:bg-muted", className)}
+      className={cls("even:bg-muted m-0 border-t p-0", className)}
       {...props}
     />
   ),
@@ -115,7 +116,7 @@ const components = {
     <th
       className={cls(
         "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
-        className
+        className,
       )}
       {...props}
     />
@@ -124,7 +125,7 @@ const components = {
     <td
       className={cls(
         "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
-        className
+        className,
       )}
       {...props}
     />
@@ -133,7 +134,7 @@ const components = {
     <pre
       className={cls(
         "mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4",
-        className
+        className,
       )}
       {...props}
     />
@@ -142,13 +143,14 @@ const components = {
     <code
       className={cls(
         "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
-        className
+        className,
       )}
       {...props}
     />
   ),
   Image,
   Card: MdxCard,
+  HeroHome,
 };
 
 interface MdxProps {
