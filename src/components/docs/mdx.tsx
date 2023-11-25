@@ -130,15 +130,18 @@ const components = {
       {...props}
     />
   ),
-  pre: ({ className, ...props }) => (
-    <pre
-      className={cls(
-        "mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4",
-        className,
-      )}
-      {...props}
-    />
-  ),
+  pre: ({ className, ...props }) => {
+    return (
+      <div className="mb-4 mt-6 overflow-x-auto rounded-lg bg-zinc-600/20 py-4">
+        <div className="mb-1 flex flex-row justify-end px-4">
+          <span className="text-xs font-semibold text-zinc-500">
+            {props["data-language"]}
+          </span>
+        </div>
+        <pre className={cls(className)} {...props} />
+      </div>
+    );
+  },
   code: ({ className, ...props }) => (
     <code
       className={cls(

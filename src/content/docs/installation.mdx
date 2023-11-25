@@ -27,9 +27,9 @@ bun add @design-blocks/native
 
 ### Config File
 
-To configure Design Blocks, create a blocks.config.ts file (.js works too) and import `createBlocks` and `createTokens` functions from `@design-blocks/native`.
+To configure Design Blocks, create a blocks.config.ts file (.js works too) and import `createBlocks` and `createTokens` functions from **@design-blocks/native**.
 
-```ts
+```ts /createTokens/#v /createBlocks/#s
 // blocks.config.ts
 import { createTokens, createBlocks } from "@design-blocks/native";
 ```
@@ -57,7 +57,7 @@ And returns all the available functions:
 - utils: Create custom utils to improve your developer experience.
 - css: Facilitates string interpolation for writing CSS in a readable manner.
 
-```ts
+```ts showLineNumbers
 // blocks.config.ts
 
 import { createTokens, createBlocks } from "@design-blocks/native";
@@ -95,7 +95,7 @@ const [themeTokens] = createTokens({
   },
 });
 
-export const { block, css, theme, themes } = createBlocks({
+export const { block, css, theme } = createBlocks({
   theme: themeTokens,
 });
 ```
