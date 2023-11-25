@@ -11,7 +11,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
     <div className="flex min-h-screen flex-col">
       <NavigationMenuDocs />
 
-      <div className="px-4 sm:mx-auto">{children}</div>
+      <div className="max-w-7xl px-4 sm:mx-auto">{children}</div>
       <SiteFooter className="border-t" />
     </div>
   );

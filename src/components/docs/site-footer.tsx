@@ -7,7 +7,7 @@ import IconDb from "@/design-system/DB";
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className={cls(className)}>
-      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
+      <div className="container flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-10 sm:mx-auto md:h-24 md:flex-row md:py-0">
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <IconDb size={180} />
         </div>

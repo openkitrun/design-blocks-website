@@ -13,8 +13,8 @@ import { docsConfig } from "@/utils/docs";
 function NavigationMenuDocs() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-zinc-800  bg-[#050505] py-3">
-      <div className="flex flex-col px-4 sm:mx-auto">
-        <nav className="flex flex-row items-center h-full">
+      <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
+        <nav className="flex h-full flex-row items-center">
           <div className="flex flex-row items-center gap-5">
             <div className="flex flex-row items-center gap-2">
               <Link href="/">
@@ -34,12 +34,12 @@ function NavigationMenuDocs() {
               >
                 {item.title}
                 {item.isBeta && (
-                  <span className="bg-gray-500/40 py-[0.5px] px-2 rounded-full text-[8px] text-gray-400">
+                  <span className="rounded-full bg-gray-500/40 px-2 py-[0.5px] text-[8px] text-gray-400">
                     BETA
                   </span>
                 )}
                 {item.isProgress && (
-                  <span className="bg-yellow-500/40 py-[0.5px] px-2 rounded-full text-[8px] text-yellow-400">
+                  <span className="rounded-full bg-yellow-500/40 px-2 py-[0.5px] text-[8px] text-yellow-400">
                     WIP
                   </span>
                 )}

@@ -1,0 +1,48 @@
+---
+title: Config File
+description:
+publishedAt: 2023-6-10
+---
+
+# Config File
+
+We highly recommend using a dedicated `blocks.config.ts` file to configure Design Blocks, in order to get the best experience with IDEs and other integrations. This approach ensures a smoother and more efficient integration, allowing you to fully leverage Design Blocks features and tools in your development environment.
+
+A full featured config file looks like this:
+
+```ts
+import { createBlocks, createTokens } from '@design-blocks/native';
+import colors from '@design-blocks/colors/tailwind-css';
+
+const lightTheme = {
+  tokens: {
+    colors: {
+      ...
+    },
+  },
+  extendTokens: {
+    spacings: {
+      ...
+    },
+    fontSizes: {
+      ...
+    },
+    fontWeights: {
+      ...
+    },
+    radii: {
+      ...
+    },
+  },
+} as const;
+
+const utils = {
+  ...
+}
+
+const [themeTokens] = createTokens({ theme: lightTheme, utils });
+
+export const { block, css, theme } = createBlocks({
+  theme: themeTokens,
+});
+```

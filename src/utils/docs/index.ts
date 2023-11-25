@@ -20,29 +20,93 @@ export const docsConfig: DocsConfig = {
 
   sidebarNav: [
     {
-      title: "Getting Started",
+      title: "Get started",
       items: [
         {
-          title: "Introduction",
-          href: "/docs",
+          title: "Why Design Blocks?",
+          href: "/docs/why-design-blocks",
         },
         {
-          title: "Installation",
-          href: "/docs/getting-started/installation",
+          title: "Instalation",
+          href: "/docs/installation",
+        },
+        {
+          title: "blocks.config.ts",
+          href: "/docs/config-file",
         },
       ],
     },
     {
-      title: "DX",
+      title: "Theming",
+      disabled: true,
       items: [
         {
-          title: "Introducción",
-          href: "/docs/develop",
+          title: "Tokens",
+          href: "/docs/theming/tokens",
         },
         {
-          title: "Nuestra Misión",
-          href: "/docs/develop/nuestra-mision",
-          disabled: false,
+          title: "Using Tokens",
+          href: "/docs/theming/usage",
+        },
+      ],
+    },
+    {
+      title: "Customization",
+      disabled: true,
+      items: [
+        {
+          title: "Theme",
+          href: "/docs/customization/usage",
+        },
+        {
+          title: "Utilities",
+          href: "/docs/customization/utilities",
+        },
+      ],
+    },
+    {
+      title: "Primitives",
+      disabled: true,
+      items: [
+        {
+          title: "Box",
+          href: "/docs/primitives/box",
+        },
+        {
+          title: "Text",
+          href: "/docs/primitives/text",
+        },
+        {
+          title: "Stacks",
+          href: "/docs/primitives/Sstacks",
+        },
+      ],
+    },
+    {
+      title: "Unstyled",
+      disabled: true,
+      items: [
+        {
+          title: "Avatar",
+          href: "/docs/unstyled/avatar",
+        },
+        {
+          title: "Button",
+          href: "/docs/unstyled/button",
+        },
+      ],
+    },
+    {
+      title: "Colors",
+      disabled: true,
+      items: [
+        {
+          title: "tailwind-css",
+          href: "/docs/colors/tailwind-css",
+        },
+        {
+          title: "radix-ui",
+          href: "/docs/colors/bradix-uiutton",
         },
       ],
     },
