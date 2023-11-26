@@ -19,7 +19,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
         <div key={index} className="pb-8">
           <h4
             className={cls(
-              "text-md mb-1 rounded-md px-2 py-1 font-medium text-gray-100"
+              "text-md mb-1 rounded-md px-2 py-1 font-medium text-gray-100",
               // {
               //   "bg-blue-800/40 text-white": pathname.startsWith(
               //     item.href as string,
@@ -59,7 +59,7 @@ export function DocsSidebarNavItems({
               "flex w-full items-center gap-3 rounded-md p-2 text-gray-400 hover:underline",
               {
                 "text-blue-600": pathname === item.href,
-              }
+              },
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
@@ -67,39 +67,36 @@ export function DocsSidebarNavItems({
             {item.title}
 
             {item.isBeta && (
-              <span className="rounded-sm bg-blue-500/10 px-2 py-0 border border-blue-400 text-[8.5px] text-blue-300">
+              <span className="rounded-sm border border-blue-400 bg-blue-500/10 px-2 py-0 text-[8.5px] text-blue-300">
                 Beta
               </span>
             )}
 
             {item.isExperimental && (
-              <span className="rounded-sm bg-red-500/10 px-2 py-0 border border-red-400 text-[8.5px] text-red-300">
+              <span className="rounded-sm border border-red-400 bg-red-500/10 px-2 py-0 text-[8.5px] text-red-300">
                 Experimental
               </span>
             )}
           </Link>
         ) : (
-          <div className="w-full flex  items-center">
-            <span
-              key={index}
-              className="flex cursor-not-allowed items-center rounded-md p-2 opacity-40"
-            >
+          <div key={index} className="flex w-full  items-center">
+            <span className="flex cursor-not-allowed items-center rounded-md p-2 opacity-40">
               {item.title}
             </span>
 
             {item.isWIP && (
-              <span className="rounded-sm bg-yellow-500/10 px-2 py-0 border border-yellow-400 text-[8.5px] text-yellow-300">
+              <span className="rounded-sm border border-yellow-400 bg-yellow-500/10 px-2 py-0 text-[8.5px] text-yellow-300">
                 Wip
               </span>
             )}
 
             {item.isPlanned && (
-              <span className="rounded-sm bg-gray-500/10 px-2 py-0 border border-gray-400 text-[8.5px] text-gray-300">
+              <span className="rounded-sm border border-gray-400 bg-gray-500/10 px-2 py-0 text-[8.5px] text-gray-300">
                 Planned
               </span>
             )}
           </div>
-        )
+        ),
       )}
     </div>
   ) : (
