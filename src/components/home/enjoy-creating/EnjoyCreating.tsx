@@ -84,7 +84,6 @@ export const EnjoyCreating: FC = () => {
               extensions={[tabs]}
               subProps={codeSnippets}
             />
-            {/* <CodeWindow snippets={codeSnippetsLocal.howItWorksStep3} /> */}
           </div>
         </div>
       </div>

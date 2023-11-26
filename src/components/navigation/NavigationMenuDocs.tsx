@@ -33,14 +33,28 @@ function NavigationMenuDocs() {
                 className="flex flex-row items-center gap-2"
               >
                 {item.title}
+
                 {item.isBeta && (
-                  <span className="rounded-full bg-gray-500/40 px-2 py-[0.5px] text-[8px] text-gray-400">
-                    BETA
+                  <span className="rounded-sm bg-blue-500/10 px-2 py-0 border border-blue-400 text-[8.5px] text-blue-300">
+                    Beta
                   </span>
                 )}
-                {item.isProgress && (
-                  <span className="rounded-full bg-yellow-500/40 px-2 py-[0.5px] text-[8px] text-yellow-400">
-                    WIP
+
+                {item.isExperimental && (
+                  <span className="rounded-sm bg-red-500/10 px-2 py-0 border border-red-400 text-[8.5px] text-red-300">
+                    Experimental
+                  </span>
+                )}
+
+                {item.isWIP && (
+                  <span className="rounded-sm bg-yellow-500/10 px-2 py-0 border border-yellow-400 text-[8.5px] text-yellow-300">
+                    Wip
+                  </span>
+                )}
+
+                {item.isPlanned && (
+                  <span className="rounded-sm bg-gray-500/10 px-2 py-0 border border-gray-400 text-[8.5px] text-gray-300">
+                    Planned
                   </span>
                 )}
               </Link>

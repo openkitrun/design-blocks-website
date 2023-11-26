@@ -12,7 +12,7 @@ function HeroHome() {
         <p className="text-center text-gray-400">
           Design Blocks an open source UI component library that focuses on
           customization, developer experience, and building mobile apps with
-          react-native.
+          react-native or expo.
         </p>
 
         <div className="mt-4 flex justify-center gap-6">

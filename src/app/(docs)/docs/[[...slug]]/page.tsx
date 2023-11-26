@@ -99,7 +99,7 @@ export default async function DocPage({ params }: DocPageProps) {
         )}
 
         <Mdx code={doc.body.code} />
-        <hr className="my-4 md:my-6" />
+        <hr className="my-4 border-zinc-700 md:my-6" />
         <DocsPager doc={doc} />
       </div>
 

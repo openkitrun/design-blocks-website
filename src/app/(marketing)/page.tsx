@@ -42,8 +42,12 @@ export default async function HomePage() {
                   </span>{" "}
                   experience, and building mobile apps with{" "}
                   <span className="rounded-md bg-blue-950 px-2 py-1 text-blue-500">
-                    react-native.
+                    react-native
                   </span>{" "}
+                  or{" "}
+                  <span className="rounded-md bg-zinc-900 px-2 py-1 text-zinc-400">
+                    Expo
+                  </span>
                 </p>
               </div>
             </div>
@@ -72,7 +76,7 @@ export default async function HomePage() {
           <div className="flex flex-col gap-8">
             <p className="text-xl tracking-wider subpixel-antialiased">
               <span className="inline-block bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-400 bg-clip-text text-transparent">
-                Design Blocks: Streamline your React Native development.
+                Design Blocks: Streamline your React Native or Expo development.
               </span>{" "}
               Build apps intuitively, with no steep learning curve. Our goal is
               to fast-track your next app to production.

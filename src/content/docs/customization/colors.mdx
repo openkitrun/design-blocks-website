@@ -1,0 +1,21 @@
+---
+title: Colors
+description: Colors.
+publishedAt: 2023-6-10
+---
+
+# Colors
+
+Use the `colors` key in the `tokens` section of your `blocks.config.ts` configuration file. Remember, we do not provide a default color configuration, giving you complete freedom to define your own.
+
+```ts /tokens/#v /colors/#s
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      colors: {
+        // Configure your color palette here
+      },
+    },
+  },
+});
+```

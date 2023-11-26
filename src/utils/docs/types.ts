@@ -1,20 +1,14 @@
-import * as React from "react";
-
-import type { NextPage } from "next";
-
-export type NextPageLayout = NextPage & {
-  getLayout?: (page: React.ReactElement) => React.ReactNode;
-  auth?: boolean;
-};
-
 export type Nullable<T> = T | null;
 
 export type NavItem = {
   title: string;
   href: string;
   disabled?: boolean;
+  external?: boolean;
+  isPlanned?: boolean;
   isBeta?: boolean;
-  isProgress?: boolean;
+  isWIP?: boolean;
+  isExperimental?: boolean;
 };
 
 export type MainNavItem = NavItem;
@@ -23,6 +17,10 @@ export type SidebarNavItem = {
   title: string;
   disabled?: boolean;
   external?: boolean;
+  isPlanned?: boolean;
+  isBeta?: boolean;
+  isWIP?: boolean;
+  isExperimental?: boolean;
   //icon?: keyof typeof Icons;
 } & (
   | {
@@ -31,7 +29,15 @@ export type SidebarNavItem = {
     }
   | {
       href?: string;
-      items: { title: string; href: string; disabled?: boolean }[];
+      items: {
+        title: string;
+        href: string;
+        disabled?: boolean;
+        isPlanned?: boolean;
+        isBeta?: boolean;
+        isWIP?: boolean;
+        isExperimental?: boolean;
+      }[];
     }
 );
 

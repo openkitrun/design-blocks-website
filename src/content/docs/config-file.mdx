@@ -19,6 +19,18 @@ const lightTheme = {
     colors: {
       ...
     },
+    spacings: {
+      ...
+    },
+    fontSizes: {
+      ...
+    },
+    fontWeights: {
+      ...
+    },
+    radii: {
+      ...
+    },
   },
   extendTokens: {
     spacings: {
@@ -36,13 +48,37 @@ const lightTheme = {
   },
 } as const;
 
+const darkTheme = {
+  tokens: {
+    ...
+  },
+  extendTokens: {
+    ...
+  },
+}
+
+const blueTheme = {
+  tokens: {
+    ...
+  },
+  extendTokens: {
+    ...
+  },
+}
+
 const utils = {
   ...
 }
 
-const [themeTokens] = createTokens({ theme: lightTheme, utils });
+const [lightthemeTokens] = createTokens({ theme: lightTheme, utils });
+const [darkThemeTokens] = createTokens({ theme: darkTheme, utils });
+const [blueThemeTokens] = createTokens({ theme: blueTheme, utils });
 
-export const { block, css, theme } = createBlocks({
-  theme: themeTokens,
+export const { block, css, theme, themes } = createBlocks({
+  theme: lightthemeTokens,
+  themes: {
+    dark: darkThemeTokens,
+    blue: blueThemeTokens,
+  },
 });
 ```

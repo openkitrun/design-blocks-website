@@ -1,0 +1,57 @@
+---
+title: Radii
+description: Radii.
+publishedAt: 2023-6-10
+---
+
+# Radii
+
+Use the radii key in the extendTokens section of your `blocks.config.ts` file to extend the default radii values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    extendTokens: {
+      radii: {
+        // Configure your radii here
+      },
+    },
+  },
+});
+```
+
+## Overriding the default radii
+
+if you’d like to override the default radii, you can do so using the `theme.tokens.radii` section of your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      radii: {
+        base: 8,
+        sm: 4,
+        md: 10,
+      },
+    },
+  },
+});
+```
+
+## Radii tokens
+
+Design Blocks ships with the following radii tokens by default:
+
+| Name | Value |
+| ---- | ----- |
+| none | 0     |
+| base | 4     |
+| sm   | 2     |
+| md   | 6     |
+| lg   | 8     |
+| xl   | 12    |
+| 2xl  | 16    |
+| 3xl  | 20    |
+| 4xl  | 24    |
+| 5xl  | 28    |
+| full | 9999  |

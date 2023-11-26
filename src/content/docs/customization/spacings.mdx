@@ -1,0 +1,61 @@
+---
+title: Spacings
+description: Spacings.
+publishedAt: 2023-6-10
+---
+
+# Spacings
+
+Use the spacings key in the extendTokens section of your `blocks.config.ts` file to extend the default spacing values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    extendTokens: {
+      spacings: {
+        // Configure your spacing here
+      },
+    },
+  },
+});
+```
+
+## Overriding the default spacing
+
+if you’d like to override the default spacings, you can do so using the `theme.tokens.spacings` section of your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      spacings: {
+        none: 0,
+        xxs: 8,
+        xs: 12,
+        baseSpacing: 4,
+      },
+    },
+  },
+});
+```
+
+## Spacing tokens
+
+Design Blocks ships with the following spacing tokens by default:
+
+| Name        | Value  |
+| ----------- | ------ |
+| none        | 0      |
+| xxs         | 4      |
+| xs          | 8      |
+| sm          | 12     |
+| md          | 16     |
+| lg          | 24     |
+| xl          | 32     |
+| 2xl         | 40     |
+| 3xl         | 48     |
+| 4xl         | 56     |
+| 5xl         | 64     |
+| 6xl         | 72     |
+| full        | '100%' |
+| baseSpacing | 8      |

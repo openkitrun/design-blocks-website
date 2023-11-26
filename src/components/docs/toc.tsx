@@ -21,7 +21,7 @@ export function DashboardTableOfContents({ toc }: TocProps) {
             .filter(Boolean)
             .map((id) => id?.split("#")[1])
         : [],
-    [toc]
+    [toc],
   );
   const activeHeading = useActiveItem(itemIds);
   const mounted = useMounted();
@@ -32,7 +32,7 @@ export function DashboardTableOfContents({ toc }: TocProps) {
 
   return mounted ? (
     <div className="space-y-2">
-      <p className="font-medium">En esta página</p>
+      <p className="font-medium">On this page</p>
       <Tree tree={toc} activeItem={activeHeading} />
     </div>
   ) : null;
@@ -50,7 +50,7 @@ function useActiveItem(itemIds: (string | undefined)[]) {
           }
         });
       },
-      { rootMargin: `0% 0% -80% 0%` }
+      { rootMargin: `0% 0% -80% 0%` },
     );
 
     itemIds?.forEach((id) => {
@@ -88,22 +88,23 @@ interface TreeProps {
 }
 
 function Tree({ tree, level = 1, activeItem }: TreeProps) {
-  return tree?.items?.length && level < 3 ? (
+  return tree?.items?.length && level < 4 ? (
     <ul className={clsx("m-0 list-none", { "pl-4": level !== 1 })}>
       {tree.items.map((item, index) => {
+        const isActive = `#${activeItem}` === item.url;
+
         return (
           <li key={index} className={clsx("mt-0 pt-2")}>
             <a
               href={item.url}
               className={clsx(
                 "inline-block no-underline",
-                item.url === `#${activeItem}`
-                  ? "font-medium text-primary"
-                  : "text-sm text-muted-foreground"
+                isActive ? "text-blue-600" : "text-sm",
               )}
             >
               {item.title}
             </a>
+
             {item.items?.length ? (
               <Tree tree={item} level={level + 1} activeItem={activeItem} />
             ) : null}

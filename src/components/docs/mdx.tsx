@@ -6,6 +6,7 @@ import cls from "@/utils/cls";
 
 import MdxCard from "./mdx-card";
 import HeroHome from "./overview/HeroHome";
+import { Tabs, Tab } from "./Tabs";
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -20,7 +21,7 @@ const components = {
   h2: ({ className, ...props }) => (
     <h2
       className={cls(
-        "mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0",
+        "mt-10 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
         className,
       )}
       {...props}
@@ -138,6 +139,7 @@ const components = {
             {props["data-language"]}
           </span>
         </div>
+
         <pre className={cls(className)} {...props} />
       </div>
     );
@@ -145,7 +147,7 @@ const components = {
   code: ({ className, ...props }) => (
     <code
       className={cls(
-        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded border border-zinc-700 bg-zinc-800 px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className,
       )}
       {...props}
@@ -154,6 +156,8 @@ const components = {
   Image,
   Card: MdxCard,
   HeroHome,
+  Tabs,
+  Tab,
 };
 
 interface MdxProps {

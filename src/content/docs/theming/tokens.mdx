@@ -1,0 +1,266 @@
+---
+title: Tokens
+description: Tokens.
+publishedAt: 2023-6-10
+---
+
+# Tokens
+
+Tokens in Design Blocks are the foundation of theme customization. They allow you to define and consistently manage key visual aspects like colors, typography, spacing, and other design elements. Tokens facilitate:
+
+- **Visual Consistency:** Maintain a coherent look throughout your application.
+- **Reusability:** Reuse configurations across different components and projects.
+- **Ease of Change:** Update your theme in one place and reflect changes across the entire application.
+
+## How to Define Tokens
+
+To define your own tokens, create a `theme` object in the `blocks.config.ts`, file is where you define your project’s color palette, type scale, fonts, breakpoints, border radius values, and more.
+
+```ts
+import { createBlocks, createTokens } from "@design-blocks/native";
+
+const [lightthemeTokens] = createTokens({
+  theme: {
+    // Define your tokens here
+    tokens: {
+      colors: {
+        blue: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+        },
+        red: {
+          50: "#fef2f2",
+          100: "#fee2e2",
+        },
+        text: {
+          primary: "#1f2937",
+          secondary: "#6b7280",
+        },
+      },
+      fontSizes: {
+        xs: 9,
+        sm: 10,
+      },
+      fontWeights: {
+        hairline: "100",
+        thin: "200",
+      },
+    },
+    extendTokens: {
+      spacings: {
+        xs: 8,
+        sm: 12,
+      },
+      radii: {
+        sm: 2,
+        md: 6,
+      },
+    },
+  },
+  // Define your Utility functions here
+  utils: {
+    toPixels: (value: number) => `${value}px`,
+  },
+});
+```
+
+In Design Blocks, we offer default tokens for [spacings](https://github.com/openkitrun/design-blocks/blob/main/packages/%40blocks-theme/src/themeTokens/spacings.ts), [fontSizes](https://github.com/openkitrun/design-blocks/blob/main/packages/%40blocks-theme/src/themeTokens/fonts.ts#L2C3-L2C12), [fontWeights](https://github.com/openkitrun/design-blocks/blob/main/packages/%40blocks-theme/src/themeTokens/fonts.ts#L18), [radii](https://github.com/openkitrun/design-blocks/blob/main/packages/%40blocks-theme/src/themeTokens/radii.ts), and [utils](https://github.com/openkitrun/design-blocks/blob/main/packages/%40blocks-theme/src/themeTokens/utils.ts) to kickstart your project. While we don't include **color tokens**, our [@design-blocks/colors](https://github.com/openkitrun/design-blocks/tree/main/packages/%40blocks-colors) package provides a range of beautiful, accessible colors. You're free to modify or extend these tokens to meet your design needs and align with your project's goals.
+
+## Overriding Tokens
+
+In Design Blocks, you have the flexibility to override the default tokens to better suit your project's needs. You can override `spacings`, `fontSizes`, `fontWeights`, `radii`, and `utils`. Here's how to do it:
+
+```ts
+// Override in your blocks.config.ts file
+import { createTokens } from "@design-blocks/native";
+
+const customTheme = {
+  fontSizes: {
+    xs: 10,
+    sm: 12,
+    // Other font sizes
+  },
+  spacings: {
+    xs: 12
+    sm: 20,
+    // Add other custom spacings
+  },
+  // Continue with fontWeights, radii, and utils
+};
+
+const [themeTokens] = createTokens({ theme: customTheme });
+```
+
+## Extending Tokens with extendTokens
+
+Design Blocks allows you to extend the default set of tokens by using the `extendTokens` property in your theme configuration. This feature enables you to add new tokens or modify existing ones to fit your specific design requirements.
+
+```ts
+// Example of using extendTokens
+const theme = {
+  ... // existing token definitions
+  extendTokens: {
+    fontWeights: {
+      bold: "700",
+      extraBold: "800",
+    },
+    fontSizes: {
+      md: 24,
+      xl: 32,
+      // Other font sizes
+    },
+    spacings: {
+      xl: 40,
+    },
+    // Other custom tokens
+  },
+};
+```
+
+## Theme Structure
+
+Design Blocks supports the following token types:
+
+### Colors
+
+The `colors` key allows you to customize the global color palette for your project.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      colors: {
+        blue: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+        },
+        red: {
+          50: "#fef2f2",
+          100: "#fee2e2",
+        },
+        text: {
+          primary: "#1f2937",
+          secondary: "#6b7280",
+        },
+      },
+    },
+  },
+});
+```
+
+### Spacings
+
+Spacing tokens represent the margin and padding of an element. Their value is defined as a string or number.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      spacings: {
+        none: 0,
+        xxs: 4,
+        xs: 8,
+        sm: 12,
+        md: 16,
+        lg: 24,
+        xl: 32,
+        "2xl": 40,
+        "3xl": 48,
+        "4xl": 56,
+        "5xl": 64,
+        "6xl": 72,
+        full: "100%",
+        baseSpacing: 8,
+      },
+    },
+  },
+});
+```
+
+> Spacing tokens are typically used in `margin`, `marginRight`, `marginLeft`, `marginTop`, `marginBottom`, `marginVertical`, `marginHorizontal`, `padding`, `paddingRight`, `paddingLeft`, `paddingTop`, `paddingBottom`, `paddingVertical`, `paddingHorizontal`, `gap`, `rowGap`, `columnGap` properties.
+
+> El valor `baseSpacing: 8,` es un valor que afecta a los valores que utilise en un elemento, por ejemplo si utiliza la propiedad `padding` con un valor de `2` el valor final sera `16` ya que `2 * 8 = 16`. esto indica que usamos un valor base de `8` para los espacios. esto puede sr util para cambiar el valor de los espacios en un solo lugar. y si desea anular este comportamiento puede definir en la configuration de su tema `baseSpacing: 1,` y los valores que proporciona en los espacios no se multiplicaran por `8`.
+
+### Font Sizes
+
+Font size tokens represent the size of a text element. Its value is defined as a number.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      fontSizes: {
+        xs: 9,
+        sm: 10,
+        md: 12,
+        lg: 14,
+        xl: 16,
+        "2xl": 18,
+        "3xl": 24,
+        "4xl": 32,
+        "5xl": 40,
+        "6xl": 48,
+        "7xl": 56,
+        "8xl": 64,
+        "9xl": 72,
+      },
+    },
+  },
+});
+```
+
+> Font size tokens are typically used in `fontSize` property.
+
+### Font Weights
+
+Font weight tokens represent the weight of a text element. Its value is defined as a string.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      fontWeights: {
+        hairline: "100",
+        thin: "200",
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+        extrabold: "800",
+        black: "900",
+      },
+    },
+  },
+});
+```
+
+> Font weight tokens are typically used in font-weight property.
+
+### Radii
+
+Radii tokens represent the radius of a border. Its value is defined as a number.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      radii: {
+        none: 0,
+        base: 4,
+        sm: 2,
+        md: 6,
+        lg: 8,
+        xl: 12,
+        "2xl": 16,
+        "3xl": 20,
+        "4xl": 24,
+        "5xl": 28,
+        full: 9999,
+      },
+    },
+  },
+});
+```
+
+> Radii tokens are typically used in `borderRadius`, `borderBottomEndRadius`, `borderBottomLeftRadius`, `borderBottomRightRadius`, `borderBottomStartRadius`, `borderTopEndRadius`, `borderTopLeftRadius`, `borderTopRightRadius`, `borderTopStartRadius` properties.

@@ -10,17 +10,19 @@ export const docsConfig: DocsConfig = {
     {
       title: "Guides",
       href: "/docs/guides",
+      isPlanned: true,
     },
     {
       title: "Examples",
       href: "/docs/examples",
-      isProgress: true,
+      isPlanned: true,
     },
   ],
 
   sidebarNav: [
     {
       title: "Get started",
+      href: "/docs",
       items: [
         {
           title: "Why Design Blocks?",
@@ -29,10 +31,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Instalation",
           href: "/docs/installation",
+          isBeta: true,
         },
         {
           title: "blocks.config.ts",
           href: "/docs/config-file",
+          isBeta: true,
         },
       ],
     },
@@ -43,10 +47,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Tokens",
           href: "/docs/theming/tokens",
+          isBeta: true,
         },
         {
           title: "Using Tokens",
           href: "/docs/theming/usage",
+          isPlanned: true,
         },
       ],
     },
@@ -56,11 +62,33 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Theme",
-          href: "/docs/customization/usage",
+          href: "/docs/customization/theme",
+          isWIP: true,
+        },
+        {
+          title: "Colors",
+          href: "/docs/customization/colors",
+          isBeta: true,
+        },
+        {
+          title: "Spacings",
+          href: "/docs/customization/spacings",
+          isBeta: true,
+        },
+        {
+          title: "Radii",
+          href: "/docs/customization/radii",
+          isBeta: true,
+        },
+        {
+          title: "Fonts",
+          href: "/docs/customization/fonts",
+          isBeta: true,
         },
         {
           title: "Utilities",
           href: "/docs/customization/utilities",
+          isPlanned: true,
         },
       ],
     },
@@ -71,14 +99,17 @@ export const docsConfig: DocsConfig = {
         {
           title: "Box",
           href: "/docs/primitives/box",
+          isPlanned: true,
         },
         {
           title: "Text",
           href: "/docs/primitives/text",
+          isPlanned: true,
         },
         {
           title: "Stacks",
           href: "/docs/primitives/Sstacks",
+          isPlanned: true,
         },
       ],
     },
@@ -89,10 +120,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Avatar",
           href: "/docs/unstyled/avatar",
+          isPlanned: true,
         },
         {
           title: "Button",
           href: "/docs/unstyled/button",
+          isPlanned: true,
         },
       ],
     },
@@ -103,10 +136,28 @@ export const docsConfig: DocsConfig = {
         {
           title: "tailwind-css",
           href: "/docs/colors/tailwind-css",
+          isPlanned: true,
         },
         {
           title: "radix-ui",
           href: "/docs/colors/bradix-uiutton",
+          isPlanned: true,
+        },
+      ],
+    },
+    {
+      title: "Guides",
+      disabled: true,
+      items: [
+        {
+          title: "Blocks",
+          href: "/docs/guides/blocks",
+          isPlanned: true,
+        },
+        {
+          title: "Multiple themes",
+          href: "/docs/guides/multiple-themes",
+          isPlanned: true,
         },
       ],
     },

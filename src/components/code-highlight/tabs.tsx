@@ -18,7 +18,7 @@ export function CodeTabsList({ titles }: { titles: string[] }) {
         <Tabs.Trigger
           key={title}
           value={title}
-          className="radix-state-active:border-b-transparent relative flex h-10 shrink-0 items-center border-b border-r border-zinc-900  px-4 text-sm text-zinc-100 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-900 data-[state=active]:bg-blue-950"
+          className="radix-state-active:border-b-transparent relative flex h-10 shrink-0 items-center border-b border-r border-zinc-900 px-4 text-sm text-zinc-100 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-900 data-[state=active]:bg-blue-950"
         >
           {title}
         </Tabs.Trigger>

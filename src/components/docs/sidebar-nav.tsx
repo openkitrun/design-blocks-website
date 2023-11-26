@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import clsx from "clsx";
-
+import cls from "@/utils/cls";
 import { SidebarNavItem } from "@/utils/docs/types";
 
 export interface DocsSidebarNavProps {
@@ -18,7 +17,16 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
     <div className="w-full">
       {items.map((item, index) => (
         <div key={index} className="pb-8">
-          <h4 className="text-md mb-1 rounded-md px-2 py-1 font-medium text-gray-300">
+          <h4
+            className={cls(
+              "text-md mb-1 rounded-md px-2 py-1 font-medium text-gray-100"
+              // {
+              //   "bg-blue-800/40 text-white": pathname.startsWith(
+              //     item.href as string,
+              //   ),
+              // },
+            )}
+          >
             {item.title}
           </h4>
 
@@ -43,29 +51,55 @@ export function DocsSidebarNavItems({
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max text-sm">
       {items.map((item, index) =>
-        !item.disabled && item.href ? (
+        !item.disabled && !item.isWIP && !item.isPlanned && item.href ? (
           <Link
             key={index}
             href={item.href}
-            className={clsx(
-              "flex w-full items-center rounded-md p-2 hover:underline",
+            className={cls(
+              "flex w-full items-center gap-3 rounded-md p-2 text-gray-400 hover:underline",
               {
-                "bg-muted": pathname === item.href,
-              },
+                "text-blue-600": pathname === item.href,
+              }
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
           >
             {item.title}
+
+            {item.isBeta && (
+              <span className="rounded-sm bg-blue-500/10 px-2 py-0 border border-blue-400 text-[8.5px] text-blue-300">
+                Beta
+              </span>
+            )}
+
+            {item.isExperimental && (
+              <span className="rounded-sm bg-red-500/10 px-2 py-0 border border-red-400 text-[8.5px] text-red-300">
+                Experimental
+              </span>
+            )}
           </Link>
         ) : (
-          <span
-            key={index}
-            className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60"
-          >
-            {item.title}
-          </span>
-        ),
+          <div className="w-full flex  items-center">
+            <span
+              key={index}
+              className="flex cursor-not-allowed items-center rounded-md p-2 opacity-40"
+            >
+              {item.title}
+            </span>
+
+            {item.isWIP && (
+              <span className="rounded-sm bg-yellow-500/10 px-2 py-0 border border-yellow-400 text-[8.5px] text-yellow-300">
+                Wip
+              </span>
+            )}
+
+            {item.isPlanned && (
+              <span className="rounded-sm bg-gray-500/10 px-2 py-0 border border-gray-400 text-[8.5px] text-gray-300">
+                Planned
+              </span>
+            )}
+          </div>
+        )
       )}
     </div>
   ) : (

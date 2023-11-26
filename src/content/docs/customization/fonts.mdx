@@ -1,0 +1,111 @@
+---
+title: Fonts
+description: Fonts.
+publishedAt: 2023-6-10
+---
+
+# Fonts
+
+## Font Sizes
+
+Use the `fontSizes` key in the `extendTokens` section of your `blocks.config.ts` file to extend the default fontSizes values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    extendTokens: {
+      fontSizes: {
+        // Configure your font sizes here
+      },
+    },
+  },
+});
+```
+
+### Overriding the default Font Sizes
+
+if you’d like to override the default font sizes, you can do so using the `theme.tokens.fontSizes` section of your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      fontSizes: {
+        xs: 12,
+        sm: 16,
+        md: 20,
+      },
+    },
+  },
+});
+```
+
+### Font Sizes tokens
+
+Design Blocks ships with the following font sizes tokens by default:
+
+| Name | Value |
+| ---- | ----- |
+| xs   | 9     |
+| sm   | 10    |
+| md   | 12    |
+| lg   | 14    |
+| xl   | 16    |
+| 2xl  | 18    |
+| 3xl  | 24    |
+| 4xl  | 32    |
+| 5xl  | 40    |
+| 6xl  | 48    |
+| 7xl  | 56    |
+| 8xl  | 64    |
+| 9xl  | 72    |
+
+## Font Weights
+
+Use the `fontWeights` key in the `extendTokens` section of your `blocks.config.ts` file to extend the default fontWeights values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    extendTokens: {
+      fontWeights: {
+        // Configure your font weights here
+      },
+    },
+  },
+});
+```
+
+### Overriding the default Font Weights
+
+if you’d like to override the default font weights, you can do so using the `theme.tokens.fontWeights` section of your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      fontWeights: {
+        light: "100",
+        normal: "300",
+        medium: "400",
+      },
+    },
+  },
+});
+```
+
+### Font Weightstokens
+
+Design Blocks ships with the following font weights tokens by default:
+
+| Naame     | Value |
+| --------- | ----- |
+| hairline  | '100' |
+| thin      | '200' |
+| light     | '300' |
+| normal    | '400' |
+| medium    | '500' |
+| semibold  | '600' |
+| bold      | '700' |
+| extrabold | '800' |
+| black     | '900' |
