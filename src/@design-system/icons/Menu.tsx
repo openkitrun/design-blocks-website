@@ -6,7 +6,7 @@ export type CodeaProps = {
   className?: string;
 };
 
-function IconMenu({
+function IconArrowLeft({
   color = "#fff",
   size = 24,
   className,
@@ -21,7 +21,7 @@ function IconMenu({
       {...others}
     >
       <path
-        d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+        d="M10.828 12l4.95 4.95-1.414 1.415L8 12l6.364-6.364 1.414 1.414-4.95 4.95z"
         fill={color}
         className={className}
       />
@@ -29,4 +29,4 @@ function IconMenu({
   );
 }
 
-export default IconMenu;
+export default IconArrowLeft;

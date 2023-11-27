@@ -7,7 +7,7 @@ import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 
 import IconDb from "@/design-system/DB";
 
-import NavigationMenu from "@/components/navigation/NavigationMenu";
+import {Header} from "@/components/header/Header";
 
 type MainLayoutProps = {
   children?: React.ReactNode;
@@ -17,21 +17,7 @@ function MarketingLayout({ children }: MainLayoutProps) {
   return (
     <>
       <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
-        <header className="py-3">
-          <nav className="flex h-full flex-row items-center">
-            <div className="">
-              <Link href="/">
-                <IconDb size={180} />
-              </Link>
-            </div>
-
-            <div className="grow" />
-
-            <div className="flex-none">
-              <NavigationMenu />
-            </div>
-          </nav>
-        </header>
+        <Header />
       </div>
 
       <main>{children}</main>

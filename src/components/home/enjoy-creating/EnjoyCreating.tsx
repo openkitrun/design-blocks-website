@@ -42,13 +42,13 @@ export const EnjoyCreating: FC = () => {
       </div>
 
       <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
-        <div className="grid grid-cols-12 gap-20">
+        <div className="grid grid-cols-1 gap-20 sm:grid-cols-12">
           <div className="col-span-6">
             <div className="grid grid-cols-2 gap-10">
               <div className="flex max-w-xs flex-col items-center gap-5">
                 <Image
                   src="/img/home/screen_01.png"
-                  className="h-[550px]"
+                  className="h-[395px] w-[200px] sm:h-[550px] sm:w-[272px]"
                   width={272}
                   height={550}
                   alt="Wallet app ios"
@@ -65,7 +65,7 @@ export const EnjoyCreating: FC = () => {
                   src="/img/home/screen_02.png"
                   width={272}
                   height={550}
-                  className="h-[550px]"
+                  className="h-[395px] w-[200px] sm:h-[550px] sm:w-[272px]"
                   alt="Wallet app android"
                 />
 
