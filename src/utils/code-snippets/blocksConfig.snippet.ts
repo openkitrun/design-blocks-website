@@ -47,8 +47,7 @@ export const blocksConfigSnippet = outdent`
   const [lightThemeTokens] = createTokens({theme: lightTheme});
   const [darkThemeTokens] = createTokens({theme: darkTheme});
 
-  export const {theme, themes, block, css} = createBlocks({
-    theme: lightThemeTokens,
-    themes: {darkThemeTokens},
+  export const {themes, block, css} = createBlocks({
+    themes: {light: lightThemeTokens, dark: darkThemeTokens},
   });
 `;

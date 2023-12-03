@@ -74,9 +74,9 @@ const [lightthemeTokens] = createTokens({ theme: lightTheme, utils });
 const [darkThemeTokens] = createTokens({ theme: darkTheme, utils });
 const [blueThemeTokens] = createTokens({ theme: blueTheme, utils });
 
-export const { block, css, theme, themes } = createBlocks({
-  theme: lightthemeTokens,
+export const { block, css, themes } = createBlocks({
   themes: {
+    light: lightThemeTokens,
     dark: darkThemeTokens,
     blue: blueThemeTokens,
   },

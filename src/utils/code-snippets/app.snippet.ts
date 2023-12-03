@@ -15,7 +15,7 @@ function App(): JSX.Element {
     <SafeAreaProvider>
       <ThemeProvider
         theme={
-          colorScheme === "light" ? themes.defaultTheme : themes.darkThemeTokens
+          colorScheme === "light" ? themes.light : themes.dark
         }
       >
         <Screen />

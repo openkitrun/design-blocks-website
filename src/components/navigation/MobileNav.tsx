@@ -20,7 +20,7 @@ export function MobileNav({ children }: MobileNavProps) {
   return (
     <div
       className={cls(
-        "animate-in slide-in-from-bottom-80 fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md md:hidden",
+        "animate-in slide-in-from-bottom-80 fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md md:hidden"
       )}
     >
       <div className="text-popover-foreground relative z-20 grid gap-6 rounded-md bg-[#050505] p-4 shadow-md">

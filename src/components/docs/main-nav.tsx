@@ -6,7 +6,7 @@ import { useSelectedLayoutSegment } from "next/navigation";
 
 import { MainNavItem } from "@/utils/docs/types";
 import cls from "@/utils/cls";
-import { MobileNav } from "@/components/docs/mobile-nav";
+import { MobileNav } from "@/components/navigation/MobileNav";
 
 import IconDb from "@/design-system/DB";
 
@@ -52,9 +52,7 @@ export function MainNav({ items, children }: MainNavProps) {
         {/* {showMobileMenu ? <Icons.close /> : <Icons.logo />} */}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
+      {showMobileMenu && items && <MobileNav>{children}</MobileNav>}
     </div>
   );
 }

@@ -108,8 +108,8 @@ const [themeTokens] = createTokens({
   },
 });
 
-export const { block, css, theme } = createBlocks({
-  theme: themeTokens,
+export const { block, css, themes } = createBlocks({
+  themes: { light: themeTokens },
 });
 ```
 
@@ -142,16 +142,14 @@ export default Screen;
 // App.tsx index root application react-native
 
 import React from "react";
-
-import Screen from "./Screen";
-
 import { ThemeProvider } from "@design-blocks/native";
 
-import { theme } from "./blocks.config";
+import Screen from "./Screen";
+import { themes } from "./blocks.config";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themes.light}>
       <Screen />
     </ThemeProvider>
   );
