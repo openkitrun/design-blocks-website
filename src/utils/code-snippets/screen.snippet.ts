@@ -147,7 +147,7 @@ export const screenSnippet = outdent`
 
                 <Box
                   borderColor="gray.500"
-                  borderWidth={0.5}
+                  border
                   borderRadius={9999}
                   p="xs"
                 >
@@ -220,7 +220,7 @@ export const screenSnippet = outdent`
 
               <XStack
                 borderColor="gray.500"
-                borderWidth={0.5}
+                border
                 borderRadius={9999}
                 pv="xxs"
                 ph="sm"
