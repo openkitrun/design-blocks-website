@@ -44,7 +44,7 @@ export const EnjoyCreating: FC = () => {
       <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
         <div className="grid grid-cols-1 gap-20 sm:grid-cols-12">
           <div className="col-span-6">
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
               <div className="flex max-w-xs flex-col items-center gap-5">
                 <Image
                   src="/img/home/screen_01.png"
@@ -78,12 +78,14 @@ export const EnjoyCreating: FC = () => {
           </div>
 
           <div className="col-span-6">
-            <Code
-              lineNumbers
-              lang="tsx"
-              extensions={[tabs]}
-              subProps={codeSnippets}
-            />
+            <div className="w-full">
+              <Code
+                lineNumbers
+                lang="tsx"
+                extensions={[tabs]}
+                subProps={codeSnippets}
+              />
+            </div>
           </div>
         </div>
       </div>
