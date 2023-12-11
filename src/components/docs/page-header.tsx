@@ -14,12 +14,15 @@ export function DocsPageHeader({
   return (
     <>
       <div className={clsx("space-y-4", className)} {...props}>
-        <h1 className="inline-block font-heading text-4xl lg:text-5xl">
+        <h1 className="inline-block font-semibold text-4xl lg:text-5xl">
           {heading}
         </h1>
-        {text && <p className="text-xl text-muted-foreground">{text}</p>}
+
+        {text && (
+          <p className="text-xl text-muted-foreground text-gray-500">{text}</p>
+        )}
       </div>
-      <hr className="my-4" />
+      <hr className="my-10 border-zinc-700" />
     </>
   );
 }

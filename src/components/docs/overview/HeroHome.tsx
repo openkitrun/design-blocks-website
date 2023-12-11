@@ -5,7 +5,7 @@ import IconArrowRightLine from "@/design-system/icons/ArrowRightLine";
 
 function HeroHome() {
   return (
-    <div className="flex max-w-3xl flex-col px-4 sm:mx-auto">
+    <div className="flex max-w-3xl flex-col px-4 sm:mx-auto mb-16">
       <div className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-5xl font-medium">Documentation</h1>
 
