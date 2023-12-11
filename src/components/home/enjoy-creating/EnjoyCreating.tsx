@@ -32,7 +32,7 @@ const codeSnippets = [
 export const EnjoyCreating: FC = () => {
   return (
     <section className="border-t border-zinc-800 bg-[url('../../public/bg-section.svg')] py-12">
-      <div className="mb-16 flex flex-col items-center justify-center gap-4">
+      <div className="mb-16 flex flex-col items-center justify-center gap-4 px-4 sm:mx-auto">
         <h2 className="text-4xl font-semibold">Enjoy Creating</h2>
 
         <p className="text-gray-400">

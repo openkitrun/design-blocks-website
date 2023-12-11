@@ -9,7 +9,7 @@ export default async function HomePage() {
     <>
       <div className="bg-gradient-to-r from-blue-900/25 via-[#050505] to-[#050505]">
         <div className="border-t border-zinc-800 py-12">
-          <section className="mx-4 flex max-w-5xl flex-col sm:mx-auto">
+          <section className="mx-4 flex max-w-5xl flex-col px-4 sm:mx-auto">
             <div className="mb-4 flex justify-center">
               <div className="flex flex-row items-center gap-3 rounded-full bg-amber-950/40 px-5 py-2 text-amber-500">
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-900/40">
@@ -20,7 +20,7 @@ export default async function HomePage() {
             </div>
 
             <div className="flex flex-col gap-12">
-              <h1 className="text-center sm:text-8xl text-7xl font-semibold leading-none">
+              <h1 className="text-center sm:text-8xl text-6xl font-semibold leading-none">
                 <span className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                   Build
                 </span>{" "}
@@ -30,7 +30,7 @@ export default async function HomePage() {
                 </span>
               </h1>
 
-              <div className="mx-auto max-w-3xl">
+              <div className="mx-auto sm:max-w-3xl max-w-sm">
                 <p className="text-center text-3xl leading-relaxed tracking-widest">
                   An open source UI component library that focuses on{" "}
                   <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">

@@ -7,7 +7,7 @@ import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 
 import IconDb from "@/design-system/DB";
 
-import {Header} from "@/components/header/Header";
+import { Header } from "@/components/header/Header";
 
 type MainLayoutProps = {
   children?: React.ReactNode;
