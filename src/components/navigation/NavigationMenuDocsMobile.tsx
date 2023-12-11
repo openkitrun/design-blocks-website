@@ -12,7 +12,7 @@ import { docsConfig } from "@/utils/docs";
 
 function NavigationMenuDocs() {
   return (
-    <header className="sm:block hidden sticky top-0 z-40 w-full border-b border-zinc-800  bg-[#050505] py-3">
+    <header className="sticky top-0 z-40 w-full border-b border-zinc-800  bg-[#050505] py-3">
       <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
         <nav className="flex h-full flex-row items-center">
           <div className="flex flex-row items-center gap-5">

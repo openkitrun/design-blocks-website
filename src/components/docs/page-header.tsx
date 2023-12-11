@@ -19,10 +19,11 @@ export function DocsPageHeader({
         </h1>
 
         {text && (
-          <p className="text-xl text-muted-foreground text-gray-500">{text}</p>
+          <p className="text-md text-muted-foreground text-gray-500">{text}</p>
         )}
       </div>
-      <hr className="my-10 border-zinc-700" />
+
+      <hr className="my-5 border-zinc-700" />
     </>
   );
 }

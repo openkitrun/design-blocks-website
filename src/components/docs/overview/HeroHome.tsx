@@ -17,18 +17,18 @@ function HeroHome() {
 
         <div className="mt-4 flex justify-center gap-6">
           <Link
-            href="/docs"
+            href="/docs/installation"
             className="rounded-xl bg-white px-5 py-2 text-sm font-semibold text-black"
           >
             Get Started
           </Link>
 
-          <Link
+          {/* <Link
             href="/docs"
             className="rounded-xl border border-zinc-100 px-5 py-2 text-sm font-semibold text-white"
           >
             Examples
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -44,20 +44,23 @@ function HeroHome() {
                 <div className="flex flex-col gap-2">
                   <h3 className="text-2xl text-yellow-500">Get started</h3>
                   <p className="text-yellow-500">
-                    Learn how to install and configure Liveblocks into your
-                    project.
+                    Learn how to start integrating Design Blocks into your React
+                    Native or Expo application.
                   </p>
                 </div>
               </div>
 
-              <div className="flex justify-end hover:cursor-pointer">
+              <Link
+                className="flex justify-end hover:cursor-pointer"
+                href="/docs/installation"
+              >
                 <div className="flex flex-row items-center gap-4">
-                  <span className="text-yellow-300">Learn Reference</span>
+                  <span className="text-yellow-300">Learn installation</span>
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-yellow-700">
                     <IconArrowRightLine />
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -69,22 +72,26 @@ function HeroHome() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-2xl text-blue-500">Get started</h3>
+                  <h3 className="text-2xl text-blue-500">Unstyled</h3>
                   <p className="text-blue-500">
-                    Learn how to install and configure Liveblocks into your
-                    project.
+                    Accessible, style-agnostic components, ideal for integration
+                    in any Design Blocks project. Maximizes accessibility and
+                    design flexibility.
                   </p>
                 </div>
               </div>
 
-              <div className="flex justify-end hover:cursor-pointer">
+              <Link
+                className="flex justify-end hover:cursor-pointer"
+                href="/docs"
+              >
                 <div className="flex flex-row items-center gap-4">
-                  <span className="text-blue-300">Learn Reference</span>
+                  <span className="text-blue-300">Learn Unstyled</span>
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-blue-700">
                     <IconArrowRightLine />
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -97,22 +104,26 @@ function HeroHome() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-2xl text-emerald-500">Get started</h3>
+                <h3 className="text-2xl text-emerald-500">Primitives</h3>
                 <p className="text-emerald-500">
-                  Learn how to install and configure Liveblocks into your
-                  project.
+                  Provides basic components and functions for custom UI
+                  creation. Includes elements like Box, Stack, and Text,
+                  essential for UI construction.
                 </p>
               </div>
             </div>
 
-            <div className="flex justify-end hover:cursor-pointer">
+            <Link
+              className="flex justify-end hover:cursor-pointer"
+              href="/docs"
+            >
               <div className="flex flex-row items-center gap-4">
-                <span className="text-emerald-300">Learn Reference</span>
+                <span className="text-emerald-300">Learn Primitives</span>
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-emerald-700">
                   <IconArrowRightLine />
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
