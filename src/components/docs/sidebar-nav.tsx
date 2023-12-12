@@ -8,9 +8,10 @@ import { SidebarNavItem } from "@/utils/docs/types";
 
 export interface DocsSidebarNavProps {
   items: SidebarNavItem[];
+  oncloseMenu?: () => void;
 }
 
-export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
+export function DocsSidebarNav({ items, oncloseMenu }: DocsSidebarNavProps) {
   const pathname = usePathname();
 
   return items.length ? (
@@ -19,7 +20,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
         <div key={index} className="pb-8">
           <h4
             className={cls(
-              "text-md mb-1 rounded-md px-2 py-1 font-medium text-gray-100",
+              "text-md mb-1 rounded-md px-2 py-1 font-medium text-gray-100"
               // {
               //   "bg-blue-800/40 text-white": pathname.startsWith(
               //     item.href as string,
@@ -31,7 +32,11 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
           </h4>
 
           {item.items ? (
-            <DocsSidebarNavItems items={item.items} pathname={pathname} />
+            <DocsSidebarNavItems
+              onClick={oncloseMenu}
+              items={item.items}
+              pathname={pathname}
+            />
           ) : null}
         </div>
       ))}
@@ -42,11 +47,13 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
 interface DocsSidebarNavItemsProps {
   items: SidebarNavItem[];
   pathname: string | null;
+  onClick?: () => void;
 }
 
 export function DocsSidebarNavItems({
   items,
   pathname,
+  onClick,
 }: DocsSidebarNavItemsProps) {
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max text-sm">
@@ -55,11 +62,12 @@ export function DocsSidebarNavItems({
           <Link
             key={index}
             href={item.href}
+            onClick={onClick}
             className={cls(
               "flex w-full items-center gap-3 rounded-md p-2 text-gray-400 hover:underline",
               {
                 "text-blue-600": pathname === item.href,
-              },
+              }
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
@@ -96,7 +104,7 @@ export function DocsSidebarNavItems({
               </span>
             )}
           </div>
-        ),
+        )
       )}
     </div>
   ) : (

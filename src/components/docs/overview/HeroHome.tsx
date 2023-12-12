@@ -32,7 +32,7 @@ function HeroHome() {
         </div>
       </div>
 
-      <div className="mt-16 grid grid-cols-2 gap-5">
+      <div className="mt-16 grid sm:grid-cols-2 grid-cols-1 gap-5">
         <div className="flex flex-col gap-4">
           <div className="w-full rounded-xl border border-yellow-700 bg-yellow-950 p-6">
             <div className="flex h-full flex-col justify-between gap-4">

@@ -21,7 +21,7 @@ function IconArrowLeft({
       {...others}
     >
       <path
-        d="M10.828 12l4.95 4.95-1.414 1.415L8 12l6.364-6.364 1.414 1.414-4.95 4.95z"
+        d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
         fill={color}
         className={className}
       />

@@ -5,7 +5,7 @@ import * as React from "react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 
 import { NavigationLink } from "@/components/navigation/NavigationLink";
-import IconMenu from "@/design-system/icons/ArrowLeft";
+import IconMenu from "@/design-system/icons/Menu";
 
 import { MobileNav } from "@/components/navigation/MobileNav";
 
@@ -13,7 +13,7 @@ function NavigationMenu() {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   return (
-    <div>
+    <>
       <div className="sm:hidden">
         <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
           <IconMenu size={24} />
@@ -34,7 +34,7 @@ function NavigationMenu() {
           Star Us on GitHub
         </a>
       </div>
-    </div>
+    </>
   );
 }
 
