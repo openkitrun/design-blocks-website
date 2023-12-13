@@ -1,0 +1,74 @@
+---
+title: Sizes
+description: Configure the spacing values used in your design system.
+publishedAt: 2023-12-24
+---
+
+Use the sizes key in the extendTokens section of your `blocks.config.ts` file to extend the default sizes values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    extendTokens: {
+      sizes: {
+        // Configure your sizes here
+      },
+    },
+  },
+});
+```
+
+## Overriding the default sizes
+
+if you’d like to override the default sizes, you can do so using the `theme.tokens.sizes` section of your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      sizes: {
+        xxs: 8,
+        xs: 12,
+        sm: 16,
+        md: 24,
+        lg: 32,
+      },
+    },
+  },
+});
+```
+
+## Sizes tokens
+
+Design Blocks ships with the following sizes tokens by default:
+
+| Name | Value  |
+| ---- | ------ |
+| none | 0      |
+| xxs  | 4      |
+| xs   | 8      |
+| sm   | 12     |
+| md   | 16     |
+| lg   | 24     |
+| xl   | 32     |
+| 2xl  | 40     |
+| 3xl  | 48     |
+| true | 48     |
+| 4xl  | 56     |
+| 5xl  | 64     |
+| 6xl  | 72     |
+| 7xl  | 80     |
+| 8xl  | 88     |
+| 9xl  | 96     |
+| 10xl | 104    |
+| 11xl | 112    |
+| 12xl | 120    |
+| 13xl | 128    |
+| 14xl | 136    |
+| 15xl | 144    |
+| 16xl | 152    |
+| 17xl | 160    |
+| 18xl | 168    |
+| 19xl | 176    |
+| 20xl | 184    |
+| full | '100%' |

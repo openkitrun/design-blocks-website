@@ -262,3 +262,75 @@ const [lightThemeTokens] = createTokens({
 ```
 
 > Radii tokens are typically used in `borderRadius`, `borderBottomEndRadius`, `borderBottomLeftRadius`, `borderBottomRightRadius`, `borderBottomStartRadius`, `borderTopEndRadius`, `borderTopLeftRadius`, `borderTopRightRadius`, `borderTopStartRadius` properties.
+
+### Sizes
+
+Size tokens represent the width and height of an element. Its value is defined as a string or number.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      sizes: {
+        none: 0,
+        xxs: 4,
+        xs: 8,
+        sm: 12,
+        md: 16,
+        lg: 24,
+        xl: 32,
+        "2xl": 40,
+        "3xl": 48,
+        true: 48,
+        "4xl": 56,
+        "5xl": 64,
+        "6xl": 72,
+        "7xl": 80,
+        "8xl": 88,
+        "9xl": 96,
+        "10xl": 104,
+        "11xl": 112,
+        "12xl": 120,
+        "13xl": 128,
+        "14xl": 136,
+        "15xl": 144,
+        "16xl": 152,
+        "17xl": 160,
+        "18xl": 168,
+        "19xl": 176,
+        "20xl": 184,
+        full: "100%",
+      },
+    },
+  },
+});
+```
+
+> Size tokens are typically used in `width`, `height`, `minWidth`, `maxWidth`, `minHeight`, `maxHeight` properties.
+
+### Borders
+
+A border is a line surrounding a UI element. You can define them as number values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      borders: {
+        none: 0,
+        true: 1,
+        sm: 2,
+        md: 6,
+        lg: 8,
+        xl: 12,
+        "2xl": 16,
+        "3xl": 20,
+        "4xl": 24,
+        "5xl": 28,
+      },
+    },
+  },
+});
+```
+
+> Border tokens are typically used in `borderWidth`, `borderBottomWidth`, `borderEndWidth`, `borderLeftWidth`, `borderRightWidth`, `borderStartWidth`, `borderTopWidth` properties.

@@ -1,0 +1,55 @@
+---
+title: Borders
+description: Discover how to utilize and customize borders in Design Blocks to enhance the layout and visual rhythm of your project.
+publishedAt: 2023-12-24
+---
+
+Use the borders key in the extendTokens section of your `blocks.config.ts` file to extend the default borders values.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    extendTokens: {
+      borders: {
+        // Configure your sizes here
+      },
+    },
+  },
+});
+```
+
+## Overriding the default borders
+
+if you’d like to override the default borders, you can do so using the `theme.tokens.borders` section of your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    tokens: {
+      borders: {
+        true: 4,
+        sm: 8,
+        md: 10,
+        lg: 16,
+      },
+    },
+  },
+});
+```
+
+## Borders tokens
+
+Design Blocks ships with the following borders tokens by default:
+
+| Name | Value |
+| ---- | ----- |
+| none | 0     |
+| true | 1     |
+| sm   | 2     |
+| md   | 6     |
+| lg   | 8     |
+| xl   | 12    |
+| 2xl  | 16    |
+| 3xl  | 20    |
+| 4xl  | 24    |
+| 5xl  | 28    |

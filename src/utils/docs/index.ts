@@ -86,6 +86,16 @@ export const docsConfig: DocsConfig = {
           isBeta: true,
         },
         {
+          title: "Sizes",
+          href: "/docs/customization/sizes",
+          isBeta: true,
+        },
+        {
+          title: "Borders",
+          href: "/docs/customization/borders",
+          isBeta: true,
+        },
+        {
           title: "Utilities",
           href: "/docs/customization/utilities",
           isPlanned: true,
@@ -99,17 +109,17 @@ export const docsConfig: DocsConfig = {
         {
           title: "Box",
           href: "/docs/primitives/box",
-          isPlanned: true,
+          isWIP: true,
         },
         {
           title: "Text",
           href: "/docs/primitives/text",
-          isPlanned: true,
+          isWIP: true,
         },
         {
           title: "Stacks",
           href: "/docs/primitives/Sstacks",
-          isPlanned: true,
+          isWIP: true,
         },
       ],
     },
@@ -127,6 +137,31 @@ export const docsConfig: DocsConfig = {
           href: "/docs/unstyled/button",
           isPlanned: true,
         },
+        {
+          title: "Accordion",
+          href: "/docs/unstyled/accordion",
+          isPlanned: true,
+        },
+        {
+          title: "Checkbox",
+          href: "/docs/unstyled/check-box",
+          isPlanned: true,
+        },
+        {
+          title: "Toggle",
+          href: "/docs/unstyled/toggle",
+          isPlanned: true,
+        },
+        {
+          title: "Switch",
+          href: "/docs/unstyled/Switch",
+          isPlanned: true,
+        },
+        {
+          title: "Radio",
+          href: "/docs/unstyled/radio",
+          isPlanned: true,
+        },
       ],
     },
     {
@@ -136,12 +171,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "tailwind-css",
           href: "/docs/colors/tailwind-css",
-          isPlanned: true,
+          isWIP: true,
         },
         {
           title: "radix-ui",
           href: "/docs/colors/bradix-uiutton",
-          isPlanned: true,
+          isWIP: true,
         },
       ],
     },
@@ -152,12 +187,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Blocks",
           href: "/docs/guides/blocks",
-          isPlanned: true,
+          isWIP: true,
         },
         {
           title: "Multiple themes",
           href: "/docs/guides/multiple-themes",
-          isPlanned: true,
+          isWIP: true,
         },
       ],
     },
