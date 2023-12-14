@@ -1,14 +1,14 @@
 ---
 title: Configuration
-description: Vamos a prender como configura de una manera correcta su proyecto de react native o expo.
+description: Learn how to correctly configure your React Native or Expo project.
 publishedAt: 2023-12-24
 ---
 
-Despues de vaer instalado `@design-blocks/native` desde la seccion de [instalacion](/docs/installation) procedemremos a crear el archivo `blocks.config.ts` en la raiz de su proyecto esto ayudara a centralizar todo su systema de diseño, con esto garantizamos una mejor experiencia de desarro.
+After installing `@design-blocks/native` from the [installation](/docs/installation) section, proceed to create the `blocks.config.ts` file at the root of your project. This will centralize your entire design system, ensuring a better development experience.
 
 ## Quick Start
 
-Para poder usar las utilidades `createBlocks` and `createTokens` devemos importarlas en el archvo `blocks.config.ts` de la siguiente manera:
+To use the `createBlocks` and `createTokens` utilities, import them into the `blocks.config.ts` file as follows:
 
 ```ts
 // blocks.config.ts
@@ -37,7 +37,7 @@ export const { block, css, themes } = createBlocks({
 });
 ```
 
-si esta trabajando con el CLI de react native o expo, debe ubircar su archivo de punto de entrada que por lo general es `App.tsx` o `App.js` y agregar el siguiente codigo:
+If working with React Native CLI or Expo, locate your entry point file, usually App.tsx or App.js, and add the following code:
 
 ```tsx
 // App.tsx o App.js
@@ -59,7 +59,7 @@ const App = () => {
 export default App;
 ```
 
-esto deberia bastar para poder usar el sistema de diseño en su proyecto. Por ejemplo si hacemos referencia al archivo `Screen.tsx` deberia verse algo asi:
+This should suffice to use the design system in your project. For instance, the Screen.tsx file should look something like this:
 
 ```tsx
 // Screen.tsx
@@ -93,13 +93,13 @@ function Screen() {
 export default Screen;
 ```
 
-> si desea saber mas sobre la funcion block puede ir a la seccion de [block](/docs/block) y si desea saber mas sobre la funcion css puede ir a la seccion de [css](/docs/css)
+> To learn more about the block function, visit the [block](/docs/block) section, and for the css function, visit the [css](/docs/css) section.
 
-## Theme Y Tokens
+## Tokens
 
-Siguiendo el ejemplo anterior, en el archivo `blocks.config.ts` vamos a definir un tema con sus tokens, tengan en cuenta que las claves utilizadas aqui se pueden personalizar a su gusto.
+Following the previous example, we will define a theme with its tokens in the blocks.config.ts file. Keep in mind that the keys used here can be customized to your liking.
 
-La seccion de `tokens` es donde se definen los `colors`, `radis`, `fontSizes`, `fontsWeight`, `spacings`, `sizes` y `borders`. y la seccion de theme es donde se definen los tokens que se van a usar en el tema.
+The tokens section is where you define colors, radii, fontSizes, fontWeights, spacings, sizes, and borders. The theme section is where you define the tokens to be used in the theme.
 
 ```ts
 // blocks.config.ts
@@ -147,4 +147,217 @@ export const lightTheme = {
 const [lightThemeTokens] = createTokens({ theme: lightTheme });
 ```
 
-## Utils
+## Override Tokens
+
+To overwrite the default tokens that come with the design system, just add them in the tokens section as follows:
+
+```ts
+// blocks.config.ts
+import { createBlocks, createTokens } from "@design-blocks/native";
+
+export const lightTheme = {
+  tokens: {
+    colors: {
+      ...
+    },
+    radii: {
+      none: 0,
+      sm: 1,
+      base: 2,
+      true: 2,
+      md: 4,
+      lg: 6,
+      xl: 8,
+      '2xl': 16,
+      '3xl': 20,
+      '4xl': 24,
+      '5xl': 28,
+      full: 9999,
+    },
+    spacings: {
+      none: 0,
+      xxs: 4,
+      xs: 8,
+      sm: 12,
+      md: 16,
+      lg: 24,
+      xl: 32,
+      '2xl': 40,
+      '3xl': 48,
+      '4xl': 56,
+      '5xl': 64,
+      '6xl': 72,
+      full: '100%',
+      baseSpacing: 4,
+    },
+    sizes: {
+      none: 0,
+      xxs: 4,
+      xs: 8,
+      sm: 12,
+      md: 16,
+      lg: 24,
+      xl: 32,
+      '2xl': 40,
+      '3xl': 48,
+      true: 48,
+      '4xl': 56,
+      '5xl': 64,
+      '6xl': 72,
+      '7xl': 80,
+      '8xl': 88,
+      '9xl': 96,
+      '10xl': 104,
+      '11xl': 112,
+      '12xl': 120,
+      '13xl': 128,
+      '14xl': 136,
+      '15xl': 144,
+      '16xl': 152,
+      '17xl': 160,
+      '18xl': 168,
+      '19xl': 176,
+      '20xl': 184,
+      full: '100%',
+    },
+    borders: {
+      none: 0,
+      true: 4,
+      sm: 2,
+      md: 6,
+      lg: 8,
+      xl: 12,
+      '2xl': 16,
+      '3xl': 20,
+      '4xl': 24,
+      '5xl': 28,
+    },
+    fontSizes: {
+      xs: 9,
+      sm: 10,
+      md: 12,
+      lg: 14,
+      xl: 16,
+      '2xl': 18,
+      '3xl': 24,
+      '4xl': 32,
+      '5xl': 40,
+      '6xl': 48,
+      '7xl': 56,
+      '8xl': 64,
+      '9xl': 72,
+    },
+    fontsWeight: {
+      hairline: '100',
+      thin: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900',
+    },
+  },
+} as const;
+
+const [lightThemeTokens] = createTokens({ theme: lightTheme });
+```
+
+This will override the default tokens provided by the design system.
+
+## Typescript
+
+For TypeScript autocomplete to work correctly, manual changes are required. For example, you can create a block.d.ts file.
+
+The @design-blocks/native package contains useful types to make this easier, including Leaves, LooseAutocomplete.
+
+```ts
+import "@design-blocks/native";
+
+import * as RN from "react-native";
+
+import { lightTheme } from "./blocks.config";
+
+import type { Leaves, LooseAutocomplete } from "@design-blocks/native";
+
+type AppTheme = typeof lightTheme.tokens;
+
+type ColorsAppTheme = AppTheme["colors"];
+type SpacingsCustom = AppTheme["spacings"];
+type RadiiCustom = AppTheme["radii"];
+type FontSizesCustom = AppTheme["fontSizes"];
+type ColorsValueMap =
+  | LooseAutocomplete<Leaves<ColorsAppTheme>>
+  | Omit<RN.TextStyle["color"], "string">;
+
+declare module "@design-blocks/native" {
+  export interface Colors extends ColorsAppTheme {}
+  export interface Spacings extends SpacingsCustom {}
+  export interface Radii extends RadiiCustom {}
+  export interface FontSizes extends FontSizesCustom {}
+
+  export interface TextColorsProps {
+    color?: ColorsValueMap;
+    textDecorationColor?: ColorsValueMap;
+    textShadowColor?: ColorsValueMap;
+    backgroundColor?: ColorsValueMap;
+    bgColor?: ColorsValueMap;
+    borderColor?: ColorsValueMap;
+    borderTopColor?: ColorsValueMap;
+    borderRightColor?: ColorsValueMap;
+    borderEndColor?: ColorsValueMap;
+    borderBottomColor?: ColorsValueMap;
+    borderLeftColor?: ColorsValueMap;
+    borderStartColor?: ColorsValueMap;
+    borderBlockColor?: ColorsValueMap;
+    borderBlockEndColor?: ColorsValueMap;
+    borderBlockStartColor?: ColorsValueMap;
+  }
+
+  export interface BoxColorsProps {
+    backgroundColor?: ColorsValueMap;
+    bgColor?: ColorsValueMap;
+    borderColor?: ColorsValueMap;
+    borderTopColor?: ColorsValueMap;
+    borderRightColor?: ColorsValueMap;
+    borderEndColor?: ColorsValueMap;
+    borderBottomColor?: ColorsValueMap;
+    borderLeftColor?: ColorsValueMap;
+    borderStartColor?: ColorsValueMap;
+    borderBlockColor?: ColorsValueMap;
+    borderBlockEndColor?: ColorsValueMap;
+    borderBlockStartColor?: ColorsValueMap;
+    shadowColor?: ColorsValueMap;
+  }
+}
+```
+
+With this, you can easily access your tokens in your project, ensuring a better development experience. For example, in the following snippet, you can see how you can easily access your tokens.
+
+```tsx
+import { ScrollView, Image } from "react-native";
+
+import { block } from "[path-to]/blocks.config";
+
+const ScrollViewBlock = block(ScrollView)(({ theme }) => ({
+  backgroundColor: theme.colors.blue[950],
+  height: "100%",
+}));
+
+const AvatarBlock = block(Image)(({ theme }) => ({
+  width: theme.sizes["10xl"],
+  height: theme.sizes["10xl"],
+  borderRadius: theme.radii["full"],
+  borderWidth: theme.borders["xs"],
+  borderColor: theme.colors.red[950],
+}));
+
+const Avatar2Block = block.Image(({ theme }) => ({
+  width: theme.sizes["15xl"],
+  height: theme.sizes["15xl"],
+  borderRadius: theme.radii["xl"],
+  borderWidth: theme.borders["sm"],
+  borderColor: theme.colors.yellow[950],
+}));
+```
