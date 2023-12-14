@@ -17,6 +17,9 @@ dependencies:
   '@radix-ui/react-tooltip':
     specifier: 1.0.7
     version: 1.0.7(@types/react-dom@18.2.15)(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
+  '@vercel/analytics':
+    specifier: 1.1.1
+    version: 1.1.1
   bright:
     specifier: 0.8.4
     version: 0.8.4(react@18.2.0)
@@ -1594,6 +1597,12 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@vercel/analytics@1.1.1:
+    resolution: {integrity: sha512-+NqgNmSabg3IFfxYhrWCfB/H+RCUOCR5ExRudNG2+pcRehq628DJB5e1u1xqwpLtn4pAYii4D98w7kofORAGQA==}
+    dependencies:
+      server-only: 0.0.1
     dev: false
 
   /acorn-jsx@5.3.2(acorn@8.11.2):

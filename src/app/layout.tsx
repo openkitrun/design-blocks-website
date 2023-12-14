@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
-//import "./styles/globals.css";
+import type { Metadata } from "next";
+
+import "./globals.css";
 
 import cls from "@/utils/cls";
 
@@ -87,10 +88,11 @@ export default function RootLayout({
         className={cls(
           "bg-[#050505] text-white",
           inter.variable,
-          jetBrainsMono.variable,
+          jetBrainsMono.variable
         )}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
