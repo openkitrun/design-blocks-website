@@ -1,0 +1,150 @@
+---
+title: Configuration
+description: Vamos a prender como configura de una manera correcta su proyecto de react native o expo.
+publishedAt: 2023-12-24
+---
+
+Despues de vaer instalado `@design-blocks/native` desde la seccion de [instalacion](/docs/installation) procedemremos a crear el archivo `blocks.config.ts` en la raiz de su proyecto esto ayudara a centralizar todo su systema de diseño, con esto garantizamos una mejor experiencia de desarro.
+
+## Quick Start
+
+Para poder usar las utilidades `createBlocks` and `createTokens` devemos importarlas en el archvo `blocks.config.ts` de la siguiente manera:
+
+```ts
+// blocks.config.ts
+import { createBlocks, createTokens } from "@design-blocks/native";
+
+export const lightTheme = {
+  tokens: {
+    colors: {
+      blue: {
+        950: "#0000ff",
+      },
+      red: {
+        950: "#ff0000",
+      },
+      green: {
+        950: "#00ff00",
+      },
+    },
+  },
+} as const;
+
+const [themeTokens] = createTokens({ theme: lightTheme });
+
+export const { block, css, themes } = createBlocks({
+  themes: { light: themeTokens },
+});
+```
+
+si esta trabajando con el CLI de react native o expo, debe ubircar su archivo de punto de entrada que por lo general es `App.tsx` o `App.js` y agregar el siguiente codigo:
+
+```tsx
+// App.tsx o App.js
+
+import React from "react";
+import { ThemeProvider } from "@design-blocks/native";
+
+import Screen from "./Screen";
+import { themes } from "./blocks.config";
+
+const App = () => {
+  return (
+    <ThemeProvider theme={themes.light}>
+      <Screen />
+    </ThemeProvider>
+  );
+};
+
+export default App;
+```
+
+esto deberia bastar para poder usar el sistema de diseño en su proyecto. Por ejemplo si hacemos referencia al archivo `Screen.tsx` deberia verse algo asi:
+
+```tsx
+// Screen.tsx
+import {View, Text} from 'react-native';
+
+import { block, css } from "[path-to]/blocks.config";
+
+const TitleBlock = block.Text(({ theme }) => ({
+  color: theme.colors.blue[950],
+  fontSize: theme.fontSizes.['10xl'],
+}));
+
+function Screen() {
+  return(
+    <View>
+       <TitleBlock>
+        Hello World
+      </TitleBlock>
+
+      <Text
+        style={css`
+          font-Weight: '700';
+        `}
+      >
+        Other Text
+      </Text>
+    </View>
+  );
+}
+
+export default Screen;
+```
+
+> si desea saber mas sobre la funcion block puede ir a la seccion de [block](/docs/block) y si desea saber mas sobre la funcion css puede ir a la seccion de [css](/docs/css)
+
+## Theme Y Tokens
+
+Siguiendo el ejemplo anterior, en el archivo `blocks.config.ts` vamos a definir un tema con sus tokens, tengan en cuenta que las claves utilizadas aqui se pueden personalizar a su gusto.
+
+La seccion de `tokens` es donde se definen los `colors`, `radis`, `fontSizes`, `fontsWeight`, `spacings`, `sizes` y `borders`. y la seccion de theme es donde se definen los tokens que se van a usar en el tema.
+
+```ts
+// blocks.config.ts
+import { createBlocks, createTokens } from "@design-blocks/native";
+
+export const lightTheme = {
+  tokens: {
+    colors: {
+      blue: {
+        950: "#0000ff",
+      },
+      red: {
+        950: "#ff0000",
+      },
+      green: {
+        950: "#00ff00",
+      },
+      yellow: {
+        950: "#ffff00",
+      },
+    },
+  },
+  extendTokens: {
+    radii: {
+      "6xl": 32,
+    },
+    spacings: {
+      "7xl": 90,
+    },
+    sizes: {
+      "21xl": 188,
+    },
+    borders: {
+      "5xl": 32,
+    },
+    fontSizes: {
+      "10xl": 64,
+    },
+    fontsWeight: {
+      black2: "900",
+    },
+  },
+} as const;
+
+const [lightThemeTokens] = createTokens({ theme: lightTheme });
+```
+
+## Utils

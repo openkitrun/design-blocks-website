@@ -41,18 +41,28 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Theming",
+      title: "Native",
       disabled: true,
       items: [
         {
-          title: "Tokens",
-          href: "/docs/theming/tokens",
+          title: "Configuration",
+          href: "/docs/native/configuration",
           isBeta: true,
         },
         {
-          title: "Using Tokens",
-          href: "/docs/theming/usage",
-          isPlanned: true,
+          title: "Tokens",
+          href: "/docs/native/tokens",
+          isBeta: true,
+        },
+        {
+          title: "Block",
+          href: "/docs/native/block",
+          isWIP: true,
+        },
+        {
+          title: "CSS",
+          href: "/docs/native/css",
+          isWIP: true,
         },
       ],
     },
@@ -60,11 +70,6 @@ export const docsConfig: DocsConfig = {
       title: "Customization",
       disabled: true,
       items: [
-        {
-          title: "Theme",
-          href: "/docs/customization/theme",
-          isWIP: true,
-        },
         {
           title: "Colors",
           href: "/docs/customization/colors",
