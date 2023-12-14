@@ -1,0 +1,87 @@
+---
+title: Block
+description: block is a way to create React Native components with attached styles.
+publishedAt: 2023-12-24
+---
+
+Block is available in your `blocks.config.ts` file. Block was inspired 100% by the [emotion](https://emotion.sh/docs) library.
+
+> Note that we did not integrate emotion, but rather drew inspiration from this great library to create the block utility.
+
+## Styling components
+
+block has a great similarity to css for creating your styled components, except that block must be instantiated with a React Native component and then called with a template literal for string styles or a normal function call for object styles.
+
+```tsx
+import { block } from "[path-to]/blocks.config";
+
+const DescriptionBlock = block.Text`
+  color: blue;
+`;
+
+return <DescriptionBlock>Hello World</DescriptionBlock>;
+```
+
+## Styling based on props and object styles
+
+Any interpolation or function argument with `block` is called with `props`, allowing you to change the styles of a component based on `props`.
+
+```tsx
+import { block } from "[path-to]/blocks.config";
+
+const TitleBlock = block.Text(({ theme }) => ({
+  color: theme.colros.red[950],
+  fontSize: theme.fontSizes.xl,
+}));
+
+const ContainerBlock = block.View(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  width: theme.sizes.xl,
+}));
+
+return (
+  <ContainerBlock>
+    <TitleBlock>Hello World</TitleBlock>
+  </ContainerBlock>
+);
+```
+
+## Styling any component
+
+block can style any React Native component, just instantiate it with the component you want to style.
+
+```tsx
+import { ScrollView, View, Text } from "react-native";
+import { block } from "[path-to]/blocks.config";
+
+const ScrollViewBlock = block(ScrollView)(({ theme }) => ({
+  backgroundColor: theme.colors.green[950],
+  height: "100%",
+}));
+
+const TitleBlock = block(Text)(({ theme }) => ({
+  color: theme.colros.red[950],
+  fontSize: theme.fontSizes.xl,
+}));
+
+const ContainerBlock = block(View)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  width: theme.sizes.xl,
+}));
+
+return (
+  <ScrollViewBlock>
+    <ContainerBlock>
+      <TitleBlock>Hello World</TitleBlock>
+    </ContainerBlock>
+  </ScrollViewBlock>
+);
+```
+
+> You could treat block as you would with [styled from emotion](https://emotion.sh/docs/styled)

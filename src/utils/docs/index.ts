@@ -57,7 +57,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Block",
           href: "/docs/native/block",
-          isWIP: true,
+          isBeta: true,
         },
         {
           title: "CSS",
