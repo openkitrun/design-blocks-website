@@ -103,7 +103,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Utilities",
           href: "/docs/customization/utilities",
-          isPlanned: true,
+          isWIP: true,
         },
       ],
     },
@@ -124,6 +124,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Stacks",
           href: "/docs/primitives/Sstacks",
+          isWIP: true,
+        },
+        {
+          title: "SX",
+          href: "/docs/primitives/sx",
           isWIP: true,
         },
       ],
