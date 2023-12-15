@@ -10,7 +10,7 @@ function HeroHome() {
         <h1 className="text-5xl font-medium">Documentation</h1>
 
         <p className="text-center text-gray-400">
-          Design Blocks an open source UI component library that focuses on
+          Design Blocks an open source component library that focuses on
           customization, developer experience, and building mobile apps with
           react-native or expo.
         </p>
