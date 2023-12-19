@@ -3,6 +3,7 @@ import * as React from "react";
 import Link from "next/link";
 
 import { EnjoyCreating } from "@/components/home/enjoy-creating/EnjoyCreating";
+import { CodeInstall } from "@/components/home/CodeInstall";
 
 export default async function HomePage() {
   return (
@@ -31,7 +32,13 @@ export default async function HomePage() {
               </h1>
 
               <div className="mx-auto sm:max-w-3xl max-w-sm">
-                <p className="text-center text-3xl leading-relaxed tracking-widest">
+                <p className="sm:hidden block text-center text-3xl leading-relaxed tracking-widest">
+                  An open source UI component library that focuses on
+                  customization,developer experience, and building mobile apps
+                  with react-native or Expo
+                </p>
+
+                <p className="sm:block hidden text-center text-3xl leading-relaxed tracking-widest">
                   An open source UI component library that focuses on{" "}
                   <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">
                     customization
@@ -60,12 +67,7 @@ export default async function HomePage() {
                 Get Started
               </Link>
 
-              <Link
-                href="/docs"
-                className="rounded-2xl bg-white px-10 py-4 text-xl font-semibold text-black"
-              >
-                Learn Design Blocks
-              </Link>
+              <CodeInstall />
             </div>
           </section>
         </div>

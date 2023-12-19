@@ -7,6 +7,8 @@ import "./globals.css";
 
 import cls from "@/utils/cls";
 
+import Providers from "@/app/Providers";
+
 const inter = Inter({
   variable: "--font-inter",
   display: "swap",
@@ -91,7 +93,7 @@ export default function RootLayout({
           jetBrainsMono.variable
         )}
       >
-        {children}
+        <Providers>{children}</Providers>
         <Analytics />
       </body>
     </html>
