@@ -104,7 +104,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* <EnjoyCreating /> */}
+      <EnjoyCreating />
     </>
   );
 }
