@@ -45,18 +45,18 @@ export const metadata: Metadata = {
     template: "%s | Design Blocks",
   },
   description:
-    "An open source UI component library that focuses on customization, developer experience, and building mobile apps with react-native.",
+    "An open source library with tools for creating dynamic user interfaces for applications written in React Native, focused on the developer experience.",
   openGraph: {
     title: "Design Blocks",
     description:
-      "An open source UI component library that focuses on customization, developer experience, and building mobile apps with react-native.",
-    url: "designblocks.dev",
-    siteName: "X Boilerplate",
+      "An open source library with tools for creating dynamic user interfaces for applications written in React Native, focused on the developer experience.",
+    url: "https://designblocks.dev",
+    siteName: "Design Blocks",
     images: [
       {
-        url: "designblocks.dev/og.jpg",
-        width: 1920,
-        height: 1080,
+        url: "https://designblocks.dev/opengraph-image.jpeg",
+        width: 1280,
+        height: 640,
       },
     ],
     locale: "en-US",
