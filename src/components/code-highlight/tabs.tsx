@@ -8,7 +8,7 @@ export function CodeTabsList({ titles }: { titles: string[] }) {
       aria-label="Select file to view"
       className="flex flex-nowrap overflow-x-auto"
     >
-      <div className="flex h-10 items-center gap-2 border-b border-r border-zinc-900 px-4">
+      <div className="sm:flex hidden h-10 items-center gap-2 border-b border-r border-zinc-900 px-4">
         <span className="h-3 w-3 rounded-full bg-zinc-700" />
         <span className="h-3 w-3 rounded-full bg-zinc-700" />
         <span className="h-3 w-3 rounded-full bg-zinc-700" />
