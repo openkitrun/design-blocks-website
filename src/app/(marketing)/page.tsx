@@ -32,7 +32,7 @@ export default async function HomePage() {
               </h1>
 
               <div className="mx-auto sm:max-w-3xl max-w-sm">
-                <p className="sm:hidden block text-center text-3xl leading-relaxed tracking-widest">
+                <p className="sm:hidden block text-center text-2xl leading-relaxed tracking-widest">
                   An open source UI component library that focuses on
                   customization,developer experience, and building mobile apps
                   with react-native or Expo
@@ -104,7 +104,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <EnjoyCreating />
+      {/* <EnjoyCreating /> */}
     </>
   );
 }
