@@ -17,7 +17,7 @@ export function CodeInstall() {
         <IconArrowRightS />
 
         <code className="text-sm text-slate-50 font-mono">
-          npm i @design-blocks/native@latest
+          npm i @design-blocks/native@beta
         </code>
 
         <Tooltip.Root open={hasCopied}>
