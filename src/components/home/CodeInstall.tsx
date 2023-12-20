@@ -8,7 +8,7 @@ import IconFileCopy from "@/design-system/icons/line/FileCopy";
 
 export function CodeInstall() {
   const { handleCopy, hasCopied } = useClipboard(
-    "npm i @design-blocks/native@latest"
+    "npm i @design-blocks/native@beta"
   );
 
   return (
