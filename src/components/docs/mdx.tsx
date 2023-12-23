@@ -122,7 +122,7 @@ const components = {
   th: ({ className, ...props }: MDXItemComponent) => (
     <th
       className={cls(
-        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border border-zinc-700 px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}
@@ -131,7 +131,7 @@ const components = {
   td: ({ className, ...props }: MDXItemComponent) => (
     <td
       className={cls(
-        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border border-zinc-700 px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}

@@ -145,7 +145,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Button",
           href: "/docs/unstyled/button",
-          isPlanned: true,
+          isWIP: true,
         },
         {
           title: "Accordion",
