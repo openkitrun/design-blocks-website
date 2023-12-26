@@ -1,3 +1,5 @@
+import type { TagTypes } from "@/design-system/TagProgress";
+
 export type Nullable<T> = T | null;
 
 export type NavItem = {
@@ -5,10 +7,7 @@ export type NavItem = {
   href: string;
   disabled?: boolean;
   external?: boolean;
-  isPlanned?: boolean;
-  isBeta?: boolean;
-  isWIP?: boolean;
-  isExperimental?: boolean;
+  status?: TagTypes;
 };
 
 export type MainNavItem = NavItem;
@@ -17,10 +16,7 @@ export type SidebarNavItem = {
   title: string;
   disabled?: boolean;
   external?: boolean;
-  isPlanned?: boolean;
-  isBeta?: boolean;
-  isWIP?: boolean;
-  isExperimental?: boolean;
+  status?: TagTypes;
   //icon?: keyof typeof Icons;
 } & (
   | {
@@ -33,10 +29,7 @@ export type SidebarNavItem = {
         title: string;
         href: string;
         disabled?: boolean;
-        isPlanned?: boolean;
-        isBeta?: boolean;
-        isWIP?: boolean;
-        isExperimental?: boolean;
+        status?: TagTypes;
       }[];
     }
 );
