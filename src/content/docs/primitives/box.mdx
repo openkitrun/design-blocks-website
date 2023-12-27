@@ -1,0 +1,61 @@
+---
+title: Box
+description: Tines la necesidad de un componente flexible que le ayude con las necesidades de diseño de bajo nivel, Box es un componente de bajo nivel que podría ser justo lo que necesita. Con sus estilos y accesorios personalizables, se puede utilizar para crear una amplia gama de elementos de interfaz de usuario, desde contenedores simples hasta estructuras de diseño complejas.
+publishedAt: 2023-12-27
+---
+
+## Usage
+
+Este ejemplo muetra el uso de box con la configuracion predeterminada.
+
+- Create layouts with ease.
+- Use it as a container for other components.
+- Provide a shorthand way to pass styles via props, example: (bgColor instead of backgroundColor).
+
+```tsx
+<Box bgColor="blue" border="xl" p="xs">
+  <Text>This is the Box</Text>
+</Box>
+```
+
+## Import
+
+To use this component in your project, include the following import statement in your file.
+
+```tsx
+import { Box } from "@design-blocks/primitives";
+```
+
+## Props
+
+Rest assured that Box inherits all the properties of the React Native [View](https://reactnative.dev/docs/view) component.
+
+### styles props
+
+Style props are a way to alter the style of a component by simply passing props to it. It helps to save time by providing helpful shorthand ways to style components.
+
+```tsx
+<Box w="lg" h="lg" bgColor="blue" border="xl" m="lg" p="xs" borderRadius="md">
+  <Text>This is the Box</Text>
+</Box>
+```
+
+To find out which properties are theme-aware, see the [Style Props](style-props).
+
+### sx
+
+The system prop that allows defining system overrides as well as additional CSS styles.
+
+```tsx
+<Box bgColor="blue" border="xl" p="xs" sx={{ bgColor: "red" }}>
+  <Text>This is the Box</Text>
+</Box>
+```
+
+In this case, `sx` will overwrite the `bgColor` passed as a prop, resulting in a Box with a **red** `backgroundColor`.
+
+See the [`sx`](the-sx-prop) page for more details.
+
+## Unstyled
+
+It's important to note that primitive components come without predefined styles. For more information, please refer to [this link.](../native/configuration)

@@ -114,7 +114,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Box",
           href: "/docs/primitives/box",
-          status: "wip",
+          status: "beta",
         },
         {
           title: "Text",
@@ -127,8 +127,13 @@ export const docsConfig: DocsConfig = {
           status: "wip",
         },
         {
-          title: "SX",
-          href: "/docs/primitives/sx",
+          title: "Style Props",
+          href: "/docs/primitives/style-props",
+          status: "wip",
+        },
+        {
+          title: "The sx prop",
+          href: "/docs/primitives/the-sx-prop",
           status: "wip",
         },
       ],
