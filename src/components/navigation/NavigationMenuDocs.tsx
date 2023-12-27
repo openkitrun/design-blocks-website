@@ -36,7 +36,10 @@ function NavigationMenuDocs() {
             {docsConfig.mainNav?.map((item, index) => {
               if (item.status === "planned")
                 return (
-                  <div className="flex flex-row items-center gap-2 cursor-not-allowed">
+                  <div
+                    key={`item.href-${index}`}
+                    className="flex flex-row items-center gap-2 cursor-not-allowed"
+                  >
                     {item.title}
                     <TagProgress type={item.status} />
                   </div>

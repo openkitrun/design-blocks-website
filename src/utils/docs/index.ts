@@ -103,7 +103,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Utilities",
           href: "/docs/customization/utilities",
-          status: "wip",
+          status: "beta",
         },
       ],
     },

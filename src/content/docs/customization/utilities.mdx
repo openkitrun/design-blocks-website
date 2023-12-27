@@ -1,5 +1,43 @@
 ---
 title: Utilities
-description: Utilities
-publishedAt: 2023-12-22
+description: Create custom utils for a smoother developer experience.
+publishedAt: 2023-12-27
 ---
+
+Create your own functions in the utilities object. Add as many as you need.
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    ...
+  },
+  utils: {
+    // Add your own utils here
+    custom: (config) => (value) => {
+      return {
+        custom: value,
+      };
+    },
+  },
+});
+```
+
+## Overriding the default utils
+
+If you want to override the default utilities, you can do so using the `utils.[utilName]` section in your `blocks.config.ts` file:
+
+```ts
+const [lightThemeTokens] = createTokens({
+  theme: {
+    ...
+  },
+  utils: {
+    toPixels: (value: number): string => `${value}px`,
+  },
+});
+```
+
+| Name     | description                                                                                                                                           |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| toPixels | convert to pixels instead of numbers                                                                                                                  |
+| spacing  | Multiplies a value by a base spacing value. This function multiplies the provided value by a base spacing value, which defaults to 8 if not provided. |
