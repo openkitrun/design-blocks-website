@@ -1,0 +1,63 @@
+---
+title: Primitives
+description: Provides basic components and functions for custom UI creation. Includes elements like Box, Stack, and Text, essential for UI construction.
+publishedAt: 2023-12-20
+---
+
+Primitives is a component library focused on enhancing the developer's experience to create user interfaces quickly and easily.
+
+To get started with Primitives, you can install the package using your preferred package manager. Follow these steps:
+
+<Tabs className="mt-2" items={['pnpm','npm', 'yarn', 'bun']} defaultValue="pnpm">
+    <Tab value="pnpm">
+    ```sh
+    pnpm add @design-blocks/primitives@beta
+    ```
+    </Tab>
+
+    <Tab value="npm">
+    ```sh
+    npm add @design-blocks/primitives@beta
+    ```
+    </Tab>
+
+    <Tab value="yarn">
+    ```sh
+    yarn add @design-blocks/primitives@beta
+    ```
+    </Tab>
+
+    <Tab value="bun">
+    ```sh
+    bun add @design-blocks/primitives@beta
+    ```
+    </Tab>
+
+</Tabs>
+
+## Usage
+
+The `@design-blocks/primitives` package includes the following components:
+
+```jsx
+import { Box, Stack, XStack, YStack, Text } from "@design-blocks/primitives";
+
+const App = () => (
+  <Box>
+    <Stack>
+      <Text>Design Blocks 01</Text>
+      <Text>Design Blocks 02</Text>
+    </Stack>
+
+    <XStack>
+      <Text>Design Blocks 03</Text>
+      <Text>Design Blocks 04</Text>
+    </XStack>
+
+    <YStack>
+      <Text>Design Blocks 05</Text>
+      <Text>Design Blocks 06</Text>
+    </YStack>
+  </Box>
+);
+```

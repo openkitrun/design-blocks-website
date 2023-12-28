@@ -112,6 +112,11 @@ export const docsConfig: DocsConfig = {
       disabled: true,
       items: [
         {
+          title: "Overview",
+          href: "/docs/primitives",
+          status: "beta",
+        },
+        {
           title: "Box",
           href: "/docs/primitives/box",
           status: "beta",
