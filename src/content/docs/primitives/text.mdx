@@ -1,0 +1,160 @@
+---
+title: Text
+description: Text is used to display text in a user interface. This component supports nesting, styling, and touch handling, making it versatile for various UI contexts.
+publishedAt: 2023-12-27
+---
+
+## Usage
+
+This example demonstrates how to use Text with the default configuration.
+
+We will use the same example from the React Native [documentación](https://reactnative.dev/docs/text) to demonstrate how the Text component can be effectively utilized.
+
+```tsx
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("Bird's Nest");
+  const bodyText = "This is not really a bird nest.";
+
+  const onPressTitle = () => {
+    setTitleText("Bird's Nest [pressed]");
+  };
+
+  return (
+    <Text fontFamily="Cochin">
+      <Text fontSize="md" fontWeight="bold" onPress={onPressTitle}>
+        {titleText}
+        {"\n"}
+        {"\n"}
+      </Text>
+      <Text numberOfLines={5}>{bodyText}</Text>
+    </Text>
+  );
+};
+
+export default TextInANest;
+```
+
+## Import
+
+To use this component in your project, include the following import statement in your file.
+
+```tsx
+import { Text } from "@design-blocks/primitives";
+```
+
+## Props
+
+### React Native Text props
+
+Rest assured that Text inherits all the props of the React Native [Text](https://reactnative.dev/docs/text#props) component.
+
+#### Example
+
+```tsx
+   <Text
+    style={[
+      styles.paragraph,
+      {
+        fontSize: 24,
+        fontStyle: 'italic',
+        fontWeight: '300',
+        lineHeight: 10,
+        textAlign: 'center',
+        textDecorationLine: 'underline',
+        textTransform: 'capitalize',
+        textAlignVertical: 'center',
+        fontVariant: 'oldstyle-nums',
+        letterSpacing: 0,
+        includeFontPadding: false,
+        textDecorationStyle: 'double',
+        writingDirection: 'ltr',
+        textShadowOffset: { height: 0, width: 0,},
+        textShadowRadius: 0,
+      },
+    ]}
+    numberOfLines={3}
+    onPress={() => console.log('Text onPress')}
+  >
+  Lorem Ipsum is simply dummy text
+</Text>
+
+<Text style={styles.title}>title</Text>;
+
+const styles = StyleSheet.create({
+  paragraph: {
+    color: "black",
+    textDecorationColor: "yellow",
+    textShadowColor: "red",
+    textShadowRadius: 1,
+    margin: 24,
+  },
+  title: {
+    fontWeight: "bold",
+    marginVertical: 4,
+  },
+});
+
+export default App;
+```
+
+### Styles props
+
+Style props are a way to alter the style of a component by simply passing props to it. It helps to save time by providing helpful shorthand ways to style components.
+
+| Prop                | Type                                                                                                                                                      | Default  |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| color               | string, [Colors](../customization/colors)                                                                                                                 | Platform |
+| fontFamily          | string                                                                                                                                                    | Platform |
+| fontSize            | string, number, 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl'                                                      | 'md'     |
+| fontStyle           | 'normal', 'italic'                                                                                                                                        | 'normal' |
+| fontWeight          | 'normal', 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900' , 'hairline', 'thin', 'light', 'medium', 'semibold', 'extrabold', 'black' | 'normal' |
+| includeFontPadding  | bool                                                                                                                                                      | true     |
+| fontVariant         | string, enum('small-caps', 'oldstyle-nums', 'lining-nums', 'tabular-nums', 'proportional-nums' )                                                          | []       |
+| letterSpacing       | number                                                                                                                                                    | null     |
+| lineHeight          | number                                                                                                                                                    | null     |
+| textAlign           | enum('auto', 'left', 'right', 'center', 'justify' )                                                                                                       | 'auto'   |
+| textAlignVertical   | enum('auto', 'top', 'bottom', 'center' )                                                                                                                  | 'auto'   |
+| textDecorationColor | string, [Colors](../customization/colors)                                                                                                                 | null     |
+| textDecorationLine  | enum('none', 'underline', 'line-through', 'underline line-through')                                                                                       | 'none'   |
+| textDecorationStyle | enum('solid', 'double', 'dotted', 'dashed')                                                                                                               | 'solid'  |
+| textShadowColor     | string, [Colors](../customization/colors)                                                                                                                 | null     |
+| textShadowOffset    | object: `{width?: number, height?: number}`                                                                                                               | {}       |
+| textShadowRadius    | number                                                                                                                                                    | null     |
+| textTransform       | enum('none', 'uppercase', 'lowercase', 'capitalize')                                                                                                      | 'none'   |
+| verticalAlign       | enum('auto', 'top', 'bottom', 'middle')                                                                                                                   | 'auto'   |
+| writingDirection    | enum('auto', 'ltr', 'rtl')                                                                                                                                | 'auto'   |
+| userSelect          | enum('auto', 'text', 'none', 'contain', 'all')                                                                                                            | 'auto'   |
+
+#### Example
+
+```tsx
+<Text
+  color="red"
+  fontFamily="Cochin"
+  fontSize="xl"
+  fontStyle="italic"
+  fontWeight="semibold"
+>
+  This is the Text component
+</Text>
+```
+
+To find out which properties are theme-aware, see the [Style Props](style-props).
+
+### sx
+
+The system prop that allows defining system overrides as well as additional CSS styles.
+
+```tsx
+<Text color="blue" fontWeight="semibold" sx={{ color: "red" }}>
+  This is the Text
+</Text>
+```
+
+In this case, `sx` will overwrite the `color` passed as a prop, resulting in a Text with a **red** `color`.
+
+See the [`sx`](the-sx-prop) page for more details.
+
+## Unstyled
+
+It's important to note that primitive components come without predefined styles. For more information, please refer to [this link.](../native/configuration)

@@ -119,11 +119,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Text",
           href: "/docs/primitives/text",
-          status: "wip",
+          status: "beta",
         },
         {
-          title: "Stacks",
-          href: "/docs/primitives/Sstacks",
+          title: "Stack",
+          href: "/docs/primitives/stack",
           status: "wip",
         },
         {
