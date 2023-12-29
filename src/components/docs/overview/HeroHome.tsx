@@ -5,7 +5,7 @@ import IconArrowRightLine from "@/design-system/icons/ArrowRightLine";
 
 function HeroHome() {
   return (
-    <div className="flex max-w-3xl flex-col px-4 sm:mx-auto mb-16">
+    <div className="mb-16 flex max-w-3xl flex-col px-4 sm:mx-auto">
       <div className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-5xl font-medium">Documentation</h1>
 
@@ -32,7 +32,7 @@ function HeroHome() {
         </div>
       </div>
 
-      <div className="mt-16 grid sm:grid-cols-2 grid-cols-1 gap-5">
+      <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-4">
           <div className="w-full rounded-xl border border-yellow-700 bg-yellow-950 p-6">
             <div className="flex h-full flex-col justify-between gap-4">
@@ -115,7 +115,7 @@ function HeroHome() {
 
             <Link
               className="flex justify-end hover:cursor-pointer"
-              href="/docs"
+              href="/docs/primitives"
             >
               <div className="flex flex-row items-center gap-4">
                 <span className="text-emerald-300">Learn Primitives</span>
