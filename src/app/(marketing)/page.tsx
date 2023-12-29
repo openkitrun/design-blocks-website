@@ -38,7 +38,7 @@ export default async function HomePage() {
                 </p>
 
                 <p className="hidden text-center text-3xl leading-relaxed tracking-widest sm:block">
-                  An open source UI component library that focuses on{" "}
+                  An open source library that focuses on{" "}
                   <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">
                     customization
                   </span>
