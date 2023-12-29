@@ -21,7 +21,7 @@ export default async function HomePage() {
             </div>
 
             <div className="flex flex-col gap-12">
-              <h1 className="text-center sm:text-8xl text-6xl font-semibold leading-none">
+              <h1 className="text-center text-6xl font-semibold leading-none sm:text-8xl">
                 <span className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                   Build
                 </span>{" "}
@@ -31,14 +31,13 @@ export default async function HomePage() {
                 </span>
               </h1>
 
-              <div className="mx-auto sm:max-w-3xl max-w-sm">
-                <p className="sm:hidden block text-center text-2xl leading-relaxed tracking-widest">
-                  An open source UI component library that focuses on
-                  customization,developer experience, and building mobile apps
-                  with react-native or Expo
+              <div className="mx-auto max-w-sm sm:max-w-3xl">
+                <p className="block text-center text-2xl leading-relaxed tracking-widest sm:hidden">
+                  An open source library that focuses on customization,developer
+                  experience, and building mobile apps with react-native or Expo
                 </p>
 
-                <p className="sm:block hidden text-center text-3xl leading-relaxed tracking-widest">
+                <p className="hidden text-center text-3xl leading-relaxed tracking-widest sm:block">
                   An open source UI component library that focuses on{" "}
                   <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">
                     customization
@@ -59,7 +58,7 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <div className="mt-16 flex sm:flex-row flex-col justify-center gap-6">
+            <div className="mt-16 flex flex-col justify-center gap-6 sm:flex-row">
               <Link
                 href="/docs"
                 className="rounded-2xl bg-white px-10 py-4 text-xl font-semibold text-black"
