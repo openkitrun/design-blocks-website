@@ -42,45 +42,49 @@ export const EnjoyCreating: FC = () => {
       </div>
 
       <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
-        <div className="flex lg:flex-row flex-col gap-20">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
-            <div className="flex flex-col items-center gap-5">
-              <Image
-                src="/img/home/screen_01.png"
-                className="lg:w-[300px] lg:h-[570px] w-[300px] h-[600px]"
-                width={272}
-                height={550}
-                alt="Wallet app ios"
-              />
+        <div className="grid grid-cols-2 gap-20">
+          <div className="sm:col-span-1 md:col-span-2 lg:col-span-1 col-span-2">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+              <div className="flex flex-col items-center gap-5">
+                <Image
+                  src="/img/home/screen_01.png"
+                  className="lg:w-[300px] lg:h-[570px] w-[300px] h-[600px]"
+                  width={272}
+                  height={550}
+                  alt="Wallet app ios"
+                />
 
-              <div className="flex flex-row items-center gap-2 rounded-full bg-zinc-800 px-4 py-1">
-                <SiApple size={16} />
-                <span className="text-xs">IOS</span>
+                <div className="flex flex-row items-center gap-2 rounded-full bg-zinc-800 px-4 py-1">
+                  <SiApple size={16} />
+                  <span className="text-xs">IOS</span>
+                </div>
               </div>
-            </div>
 
-            <div className="flex flex-col items-center gap-5">
-              <Image
-                src="/img/home/screen_02.png"
-                width={272}
-                height={550}
-                className="lg:w-[300px] lg:h-[570px] w-[300px] h-[600px]"
-                alt="Wallet app android"
-              />
+              <div className="flex flex-col items-center gap-5">
+                <Image
+                  src="/img/home/screen_02.png"
+                  width={272}
+                  height={550}
+                  className="lg:w-[300px] lg:h-[570px] w-[300px] h-[600px]"
+                  alt="Wallet app android"
+                />
 
-              <div className="flex flex-row items-center gap-2 rounded-full bg-emerald-950 px-4 py-1">
-                <SiAndroid size={16} color="#34d399" />
-                <span className="text-xs text-emerald-400">Android</span>
+                <div className="flex flex-row items-center gap-2 rounded-full bg-emerald-950 px-4 py-1">
+                  <SiAndroid size={16} color="#34d399" />
+                  <span className="text-xs text-emerald-400">Android</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <Code
-            lineNumbers
-            lang="tsx"
-            extensions={[tabs]}
-            subProps={codeSnippets}
-          />
+          <div className="sm:col-span-1 md:col-span-2 lg:col-span-1 col-span-2">
+            <Code
+              lineNumbers
+              lang="tsx"
+              extensions={[tabs]}
+              subProps={codeSnippets}
+            />
+          </div>
         </div>
       </div>
     </section>

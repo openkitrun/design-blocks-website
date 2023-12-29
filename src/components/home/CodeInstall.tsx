@@ -21,14 +21,19 @@ export function CodeInstall() {
         </code>
 
         <Tooltip.Root open={hasCopied}>
-          <Tooltip.Trigger asChild>
-            <button onClick={handleCopy}>
+          <Tooltip.Trigger onClick={handleCopy} asChild>
+            <button
+              aria-label="Copy snippet design blocks"
+              title="Copy snippet design blocks"
+              onClick={handleCopy}
+            >
               <IconFileCopy />
             </button>
           </Tooltip.Trigger>
 
           <Tooltip.Portal>
             <Tooltip.Content
+              aria-label="Copied to clipboard"
               className="select-none bg-gray-500/50 px-[15px] py-1 text-[15px] rounded-sm mb-5"
               sideOffset={5}
             >

@@ -10,7 +10,7 @@ export function Header() {
   return (
     <header className="py-3">
       <nav className="flex h-full flex-row items-center">
-        <Link href="/">
+        <Link aria-label="Link to home" href="/">
           <IconDb size={180} className="hidden sm:block" />
           <IconDesignBlocksBasic size={30} className="sm:hidden" />
         </Link>
