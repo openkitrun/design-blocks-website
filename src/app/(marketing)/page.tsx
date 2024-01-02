@@ -90,6 +90,13 @@ export default async function HomePage() {
                 each project.
               </span>
             </p>
+
+            <p className="text-xl tracking-wider subpixel-antialiased">
+              It’s also worth mentioning that with design blocks you can{" "}
+              <span className="inline-block bg-gradient-to-r from-rose-400 via-orange-500 to-fuchsia-400 bg-clip-text text-transparent">
+                create your design system.
+              </span>
+            </p>
           </div>
         </div>
       </section>
