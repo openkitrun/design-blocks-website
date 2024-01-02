@@ -32,28 +32,16 @@ export default async function HomePage() {
               </h1>
 
               <div className="mx-auto max-w-sm sm:max-w-3xl">
-                <p className="block text-center text-2xl leading-relaxed tracking-widest sm:hidden">
-                  An open source library that focuses on customization,developer
-                  experience, and building mobile apps with react-native or Expo
-                </p>
-
-                <p className="hidden text-center text-3xl leading-relaxed tracking-widest sm:block">
-                  An open source library that focuses on{" "}
-                  <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">
-                    customization
-                  </span>
-                  ,
+                <p className="text-center text-3xl leading-relaxed tracking-widest">
+                  An open-source library that focuses on the{" "}
                   <span className="rounded-md bg-emerald-950 px-2 py-1 text-emerald-500">
                     developer
                   </span>{" "}
-                  experience, and building mobile apps with{" "}
-                  <span className="rounded-md bg-blue-950 px-2 py-1 text-blue-500">
-                    react-native
+                  experience, offering complete control over style and{" "}
+                  <span className="rounded-md bg-rose-950 px-2 py-1 text-rose-500">
+                    customization
                   </span>{" "}
-                  or{" "}
-                  <span className="rounded-md bg-zinc-900 px-2 py-1 text-zinc-400">
-                    Expo
-                  </span>
+                  in their projects.
                 </p>
               </div>
             </div>
@@ -77,18 +65,21 @@ export default async function HomePage() {
           <div className="flex flex-col gap-8">
             <p className="text-xl tracking-wider subpixel-antialiased">
               <span className="inline-block bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-400 bg-clip-text text-transparent">
-                Design Blocks: Streamline your React Native or Expo development.
-              </span>{" "}
-              Build apps intuitively, with no steep learning curve. Our goal is
-              to fast-track your next app to production.
+                It’s important to note that this library is not a UI Kit.
+              </span>
             </p>
 
             <p className="text-xl tracking-wider subpixel-antialiased">
-              We firmly believe in providing developers with the best tools. Our
-              goal is to build a strong community where you come first,{" "}
+              The library it provides low-level functionality for developers who
+              either want{" "}
               <span className="inline-block bg-gradient-to-r from-emerald-400 via-emerald-500 to-sky-400 bg-clip-text text-transparent">
-                empowering you to create great things.
+                full control of styling in their projects.
               </span>
+            </p>
+
+            <p className="text-xl tracking-wider subpixel-antialiased">
+              Build apps intuitively, with no steep learning curve. Our goal is
+              to fast-track your next app to production.
             </p>
 
             <p className="text-xl tracking-wider subpixel-antialiased">

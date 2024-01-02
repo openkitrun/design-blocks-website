@@ -16,13 +16,13 @@ type MainLayoutProps = {
 function MarketingLayout({ children }: MainLayoutProps) {
   return (
     <>
-      <div className="flex max-w-7xl flex-col px-4 sm:mx-auto">
+      <div className="max-w-7xl px-4 sm:mx-auto">
         <Header />
       </div>
 
       <main>{children}</main>
 
-      <footer className="flex max-w-7xl flex-col px-4 py-20 sm:mx-auto">
+      <footer className="max-w-7xl px-4 py-20 sm:mx-auto">
         <div className="flex sm:flex-row flex-col gap-5">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-5">
