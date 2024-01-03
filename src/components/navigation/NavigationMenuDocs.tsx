@@ -66,6 +66,7 @@ function NavigationMenuDocs() {
               <NavigationLink
                 href="https://github.com/openkitrun/design-blocks"
                 startAdornment={<SiGithub size={18} />}
+                target="_blank"
               >
                 Star Us on GitHub
               </NavigationLink>

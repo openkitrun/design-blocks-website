@@ -25,8 +25,9 @@ export const docsConfig: DocsConfig = {
       href: "/docs",
       items: [
         {
-          title: "Why Design Blocks?",
-          href: "/docs/why-design-blocks",
+          title: "Overview",
+          href: "/docs",
+          status: "beta",
         },
         {
           title: "Instalation",
@@ -37,6 +38,10 @@ export const docsConfig: DocsConfig = {
           title: "blocks.config.ts",
           href: "/docs/config-file",
           status: "beta",
+        },
+        {
+          title: "Benchmarks",
+          href: "/docs/benchmarks",
         },
       ],
     },
@@ -147,6 +152,11 @@ export const docsConfig: DocsConfig = {
       title: "Unstyled",
       disabled: true,
       items: [
+        {
+          title: "Overview",
+          href: "/docs/unstyled",
+          status: "wip",
+        },
         {
           title: "Avatar",
           href: "/docs/unstyled/avatar",

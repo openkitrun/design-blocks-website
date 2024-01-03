@@ -6,7 +6,7 @@ export default async function sitemap() {
     lastModified: doc.publishedAt,
   }));
 
-  const routes = ["", "/docs", "/docs/why-design-blocks"].map((route) => ({
+  const routes = ["", "/docs", "/docs/benchmarks"].map((route) => ({
     url: `https://www.designblocks.dev/${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));

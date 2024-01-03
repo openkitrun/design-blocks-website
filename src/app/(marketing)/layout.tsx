@@ -42,6 +42,21 @@ function MarketingLayout({ children }: MainLayoutProps) {
                 reserved.
               </time>
             </div>
+
+            <div className="flex flex-col gap-2">
+              <h4>Author</h4>
+              <p>
+                Jorge Luis Calleja A.{" "}
+                <Link
+                  className="hover:underline text-blue-500"
+                  target="_blank"
+                  aria-label="link to x account"
+                  href="https://twitter.com/wootsbot"
+                >
+                  (wootsbot)
+                </Link>
+              </p>
+            </div>
           </div>
 
           <div className="grow" />

@@ -9,16 +9,22 @@ type NavigationLinkProps = {
   startAdornment?: React.ReactNode | null;
   endAdornment?: React.ReactNode | null;
   children?: React.ReactNode | string;
-} & LinkProps;
+} & LinkProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export function NavigationLink({
   children,
   startAdornment,
   endAdornment,
   href,
+  ...others
 }: NavigationLinkProps) {
   return (
-    <Link href={href} className="px-3 py-2 rounded-md hover:bg-gray-500/40">
+    <Link
+      href={href}
+      className="px-3 py-2 rounded-md hover:bg-gray-500/40"
+      {...others}
+    >
       {startAdornment && (
         <div className="flex flex-row items-center gap-4">
           {startAdornment}
