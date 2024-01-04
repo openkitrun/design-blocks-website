@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import cls from "@/utils/cls";
 
 import MdxCard from "./mdx-card";
+import { Feedback } from "./Feedback";
 import HeroHome from "./overview/HeroHome";
 import { Tabs, Tab } from "./Tabs";
 
@@ -77,7 +78,10 @@ const components = {
   ),
   p: ({ className, ...props }: MDXItemComponent) => (
     <p
-      className={cls("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cls(
+        "leading-7 [&:not(:first-child)]:mt-6 text-zinc-400",
+        className
+      )}
       {...props}
     />
   ),
@@ -164,6 +168,7 @@ const components = {
   HeroHome,
   Tabs,
   Tab,
+  Feedback,
 };
 
 interface MdxProps {

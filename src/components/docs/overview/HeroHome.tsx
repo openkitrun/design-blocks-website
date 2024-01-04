@@ -3,13 +3,15 @@ import Link from "next/link";
 import IconBookOpen from "@/design-system/icons/BookOpen";
 import IconArrowRightLine from "@/design-system/icons/ArrowRightLine";
 
+import { Feedback } from "../Feedback";
+
 function HeroHome() {
   return (
     <div className="mb-16 flex max-w-3xl flex-col px-4 sm:mx-auto">
       <div className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-5xl font-medium">Documentation</h1>
 
-        <p className="text-center text-gray-400">
+        <p className="text-center text-zinc-400">
           Design Blocks an open-source library that focuses on the developer
           experience, offering complete control over style and customization in
           their projects
@@ -22,14 +24,14 @@ function HeroHome() {
           >
             Get Started
           </Link>
-
-          {/* <Link
-            href="/docs"
-            className="rounded-xl border border-zinc-100 px-5 py-2 text-sm font-semibold text-white"
-          >
-            Examples
-          </Link> */}
         </div>
+      </div>
+
+      <div className="mt-5">
+        <Feedback
+          title="Design Blocks is currently in development preview with unstable dependencies."
+          description="While not planned, we may need to introduce breaking changes in these dependencies on the road to Design Blocks v1.0."
+        />
       </div>
 
       <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2">
