@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "contentlayer build && next build",
     "start": "next start",
-    "lint": "next lint"
+    "biome:check": "biome check ./src/**/*.tsx",
+    "biome:format": "biome format ./src/**/*.tsx --write"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "9.2.0",
@@ -29,6 +30,7 @@
     "tailwind-merge": "2.1.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.4.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
