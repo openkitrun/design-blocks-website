@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "contentlayer build && next build",
     "start": "next start",
-    "biome:check": "biome check ./src/**/*.tsx",
-    "biome:format": "biome format ./src/**/*.tsx --write"
+    "biome:check": "biome check ./src/**/*.{tsx,ts}",
+    "biome:format": "biome format ./src/**/*.{tsx,ts} --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "9.2.0",
@@ -31,10 +32,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
+    "@commitlint/cli": "18.4.4",
+    "@commitlint/config-conventional": "18.4.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "husky": "8.0.0",
     "mdast-util-toc": "6.1.1",
     "postcss": "^8",
     "rehype-autolink-headings": "6.1.1",

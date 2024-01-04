@@ -1,16 +1,12 @@
-import {
-  renderCodeToHTML,
-  runTwoSlash,
-  createShikiHighlighter,
-  type UserConfigSettings,
-} from "shiki-twoslash";
+import shiki from 'shiki';
+import { createShikiHighlighter, renderCodeToHTML, runTwoSlash } from 'shiki-twoslash';
+import type { UserConfigSettings } from 'shiki-twoslash';
 //import { getHighlighter } from "shiki";
-import shiki from "shiki";
 type Highlighter = Awaited<ReturnType<typeof createShikiHighlighter>>;
 
 const highlighterMap = new Map<ColorScheme, Highlighter>();
 
-export type ColorScheme = "light" | "dark";
+export type ColorScheme = 'light' | 'dark';
 
 // export const snippetToHtml = async () => {
 //   await shiki

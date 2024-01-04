@@ -1,16 +1,11 @@
-import { useState, useCallback, useEffect } from "react";
-import copy from "copy-to-clipboard";
+import copy from 'copy-to-clipboard';
+import { useCallback, useEffect, useState } from 'react';
 
-export function useClipboard(
-  text: string,
-  optionsOrTimeout: { timeout?: number } = {}
-) {
+export function useClipboard(text: string, optionsOrTimeout: { timeout?: number } = {}) {
   const [hasCopied, setHasCopied] = useState(false);
 
   const { timeout = 1500, ...copyOptions } =
-    typeof optionsOrTimeout === "number"
-      ? { timeout: optionsOrTimeout }
-      : optionsOrTimeout;
+    typeof optionsOrTimeout === 'number' ? { timeout: optionsOrTimeout } : optionsOrTimeout;
 
   const handleCopy = useCallback(() => {
     const didCopy = copy(text, copyOptions);

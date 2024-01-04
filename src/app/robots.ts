@@ -2,10 +2,10 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: '*',
       },
     ],
-    sitemap: "https://designblocks.dev/sitemap.xml",
-    host: "https://designblocks.dev",
+    sitemap: 'https://designblocks.dev/sitemap.xml',
+    host: 'https://designblocks.dev',
   };
 }

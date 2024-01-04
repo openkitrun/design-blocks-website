@@ -12,6 +12,10 @@
         "noEmptyInterface": "off",
         "noExplicitAny": "off"
       },
+      "correctness": {
+        "useHookAtTopLevel": "error",
+        "useExhaustiveDependencies": "warn"
+      },
       "performance": {
         "noDelete": "error"
       },
